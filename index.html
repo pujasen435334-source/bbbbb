@@ -1,840 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Salma Khatoon – Build Your Side Hustle</title>
-    <meta name="description" content="1000+ students, housewives & job professionals have built side hustles with Salma Khatoon!">
-    <meta property="og:image" content="https://i.ibb.co/ytN7kny/Whats-App-Image-2026-06-25-at-22-19-58.jpg">
-    <meta name="theme-color" content="#7c3aed">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Salma Khatoon – Build Your Side Hustle</title>
+<meta name="description" content="1000+ students, housewives & job professionals have built side hustles with Salma Khatoon!">
+<meta property="og:image" content="https://i.ibb.co/ytN7kny/Whats-App-Image-2026-06-25-at-22-19-58.jpg">
+<meta name="theme-color" content="#7c3aed">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1196364229072595');fbq('track','PageView');
+</script>
+<style>
+:root{
+  --purple:#7c3aed;--purple-dk:#4c1d95;--purple-lt:#ede9fe;
+  --accent:#a855f7;--bg:#f8f5ff;--surface:#fff;
+  --text:#1e1b4b;--muted:#6b7280;--border:#ddd6fe;
+  --sh1:0 2px 8px rgba(124,58,237,.10);
+  --sh2:0 6px 24px rgba(124,58,237,.16);
+  --sh3:0 16px 48px rgba(124,58,237,.22);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:.75rem 0}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 1.25rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nav-logo{font-weight:900;font-size:1.1rem;color:var(--purple);text-decoration:none;white-space:nowrap}
+.nav-cta{display:inline-flex;align-items:center;gap:.45rem;background:linear-gradient(135deg,var(--purple),var(--purple-dk));color:#fff;font-weight:700;font-size:.88rem;padding:.6rem 1.4rem;border-radius:50px;border:none;cursor:pointer;text-decoration:none;box-shadow:var(--sh2);transition:transform .2s,box-shadow .2s;white-space:nowrap}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:var(--sh3);color:#fff}
 
-    <!-- Meta Pixel -->
-    <script>
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init','1196364229072595');fbq('track','PageView');
-    </script>
+/* PILL */
+.pill{display:inline-block;background:var(--purple-lt);color:var(--purple);font-weight:700;font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;padding:.32rem .9rem;border-radius:50px;border:1px solid var(--border)}
 
-    <style>
-        :root {
-            --bg:        #f8f5ff;
-            --surface:   #ffffff;
-            --purple:    #7c3aed;
-            --purple-dk: #4c1d95;
-            --purple-lt: #ede9fe;
-            --accent:    #a855f7;
-            --text:      #1e1b4b;
-            --muted:     #6b7280;
-            --border:    #ddd6fe;
-            --shadow-sm: 0 2px 8px rgba(124,58,237,.10);
-            --shadow-md: 0 6px 24px rgba(124,58,237,.16);
-            --shadow-lg: 0 12px 40px rgba(124,58,237,.22);
-        }
+/* GRADIENT TEXT */
+.g-text{background:linear-gradient(135deg,var(--purple),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* PRIMARY BUTTON */
+.btn-primary-custom{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:linear-gradient(135deg,var(--purple),var(--purple-dk));color:#fff;font-weight:700;font-size:1rem;padding:.9rem 2rem;border-radius:50px;border:none;cursor:pointer;text-decoration:none;box-shadow:var(--sh2);transition:transform .22s,box-shadow .22s;width:100%}
+.btn-primary-custom:hover{transform:translateY(-3px);box-shadow:var(--sh3);color:#fff}
+.btn-primary-custom:active{transform:translateY(0)}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.65;
-            overflow-x: hidden;
-        }
+/* ──────────── HERO ──────────── */
+.hero{padding:60px 0 0;background:linear-gradient(160deg,#f3eeff 0%,#fff 55%,#fdf4ff 100%);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-100px;right:-100px;width:420px;height:420px;background:radial-gradient(circle,rgba(168,85,247,.13) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.hero-text-col{padding:0 1rem 2.5rem}
+.hero h1{font-size:clamp(1.9rem,4.5vw,3rem);font-weight:900;line-height:1.12;margin-bottom:1rem}
+.hero .sub{font-size:1rem;color:var(--muted);margin-bottom:1.5rem;max-width:480px}
+.hero-stats{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem}
+.h-stat{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:.85rem 1.1rem;min-width:100px;text-align:center;box-shadow:var(--sh1)}
+.h-stat .num{font-size:1.5rem;font-weight:900;color:var(--purple);line-height:1}
+.h-stat .lbl{font-size:.7rem;color:var(--muted);margin-top:.2rem}
 
-        /* ── UTILITY ── */
-        .pill-badge {
-            display: inline-block;
-            background: var(--purple-lt);
-            color: var(--purple);
-            font-weight: 700;
-            font-size: .78rem;
-            letter-spacing: .06em;
-            text-transform: uppercase;
-            padding: .35rem 1rem;
-            border-radius: 50px;
-            border: 1px solid var(--border);
-        }
+/* HERO VIDEO */
+.hero-video-col{padding:0}
+.video-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:20px 20px 0 0;box-shadow:var(--sh3);border:3px solid var(--border);border-bottom:none}
+.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
 
-        .g-text {
-            background: linear-gradient(135deg, var(--purple), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
-        }
+/* ──────────── MENTOR ──────────── */
+.mentor-section{padding:70px 0;background:var(--surface)}
+.mentor-photo-box{border-radius:18px;overflow:hidden;box-shadow:var(--sh3);border:3px solid var(--border);width:100%;max-width:380px;margin:0 auto}
+.mentor-photo-box img{width:100%;height:auto;display:block;object-fit:cover}
+.info-card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:1.1rem 1.25rem;margin-bottom:.85rem}
+.info-card .ic-icon{font-size:1.3rem;margin-bottom:.3rem}
+.info-card h4{font-size:.78rem;font-weight:700;color:var(--purple);text-transform:uppercase;letter-spacing:.05em;margin-bottom:.2rem}
+.info-card p{font-size:.88rem;color:var(--muted);margin:0}
 
-        .cta-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: .55rem;
-            background: linear-gradient(135deg, var(--purple), var(--purple-dk));
-            color: #fff;
-            font-weight: 700;
-            font-size: 1rem;
-            padding: .9rem 2rem;
-            border-radius: 50px;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-            box-shadow: var(--shadow-md);
-            transition: transform .22s, box-shadow .22s;
-        }
-        .cta-btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); color: #fff; }
-        .cta-btn:active { transform: translateY(0); }
+/* ──────────── STORIES ──────────── */
+.stories-section{padding:70px 0;background:var(--bg)}
+.shorts-outer{position:relative;margin:0 -8px}
+.shorts-scroll{display:flex;gap:1rem;overflow-x:auto;padding:1rem 8px 1.25rem;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--purple) var(--purple-lt)}
+.shorts-scroll::-webkit-scrollbar{height:5px}
+.shorts-scroll::-webkit-scrollbar-track{background:var(--purple-lt);border-radius:3px}
+.shorts-scroll::-webkit-scrollbar-thumb{background:var(--purple);border-radius:3px}
+.short-card{flex-shrink:0;width:280px;height:498px;border-radius:16px;overflow:hidden;box-shadow:var(--sh2);background:#000;transition:transform .25s}
+.short-card:hover{transform:scale(1.025)}
+.short-card iframe{width:100%;height:100%;border:none}
+.arr{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;background:var(--surface);border:1.5px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5;box-shadow:var(--sh1);transition:all .2s;color:var(--purple)}
+.arr:hover{background:var(--purple);color:#fff;border-color:var(--purple)}
+.arr.prev{left:0}
+.arr.next{right:0}
 
-        /* ── NAV ── */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(255,255,255,.92);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-            padding: .85rem 0;
-        }
-        .nav-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 1.25rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .nav-logo {
-            font-weight: 800;
-            font-size: 1.15rem;
-            color: var(--purple);
-            text-decoration: none;
-        }
+/* ──────────── STEPS ──────────── */
+.steps-section{padding:70px 0;background:var(--surface)}
+.step-card{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:1.4rem;height:100%;transition:transform .25s,box-shadow .25s}
+.step-card:hover{transform:translateY(-5px);box-shadow:var(--sh2)}
+.step-num{width:44px;height:44px;background:linear-gradient(135deg,var(--purple),var(--purple-dk));color:#fff;font-weight:900;font-size:1.1rem;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem}
+.step-card h3{font-size:.95rem;font-weight:700;color:var(--purple);margin-bottom:.35rem}
+.step-card p{font-size:.85rem;color:var(--muted);margin:0}
+.step-tag{display:inline-block;background:var(--purple-lt);color:var(--purple);font-size:.72rem;font-weight:600;padding:.22rem .6rem;border-radius:50px;margin-top:.65rem}
 
-        /* ── HERO ── */
-        .hero {
-            padding: 80px 0 60px;
-            text-align: center;
-            background: linear-gradient(160deg, #f5f0ff 0%, #fff 60%, #fdf4ff 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -120px; right: -120px;
-            width: 480px; height: 480px;
-            background: radial-gradient(circle, rgba(168,85,247,.12) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-        .hero h1 {
-            font-size: clamp(2rem, 5vw, 3.2rem);
-            font-weight: 900;
-            line-height: 1.15;
-            margin-bottom: 1rem;
-        }
-        .hero p.sub {
-            font-size: 1.15rem;
-            color: var(--muted);
-            max-width: 560px;
-            margin: 0 auto 2rem;
-        }
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            margin-top: 2.5rem;
-        }
-        .h-stat {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 1rem 1.5rem;
-            min-width: 130px;
-            box-shadow: var(--shadow-sm);
-        }
-        .h-stat .num {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: var(--purple);
-            line-height: 1;
-        }
-        .h-stat .lbl { font-size: .78rem; color: var(--muted); margin-top: .25rem; }
+/* ──────────── STATS ──────────── */
+.stats-section{padding:60px 0;background:var(--bg)}
+.stat-tile{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center;box-shadow:var(--sh1)}
+.stat-tile .big{font-size:2rem;font-weight:900;color:var(--purple);line-height:1}
+.stat-tile .lbl{font-size:.78rem;color:var(--muted);margin-top:.3rem}
 
-        /* ── ABOUT ── */
-        .about-section { padding: 70px 0; background: var(--surface); }
-        .about-photo {
-            width: 210px;
-            height: 210px;
-            object-fit: cover;
-            object-position: top center;
-            border-radius: 50%;
-            border: 5px solid var(--purple);
-            box-shadow: 0 0 0 8px var(--purple-lt), var(--shadow-md);
-            display: block;
-            margin: 0 auto 1.5rem;
-        }
-        .about-card {
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 1.25rem 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .about-card .icon { font-size: 1.4rem; margin-bottom: .4rem; }
-        .about-card h4 { font-size: .85rem; font-weight: 700; color: var(--purple); margin-bottom: .2rem; text-transform: uppercase; letter-spacing: .04em; }
-        .about-card p { font-size: .92rem; color: var(--muted); margin: 0; }
+/* ──────────── FAQ ──────────── */
+.faq-section{padding:70px 0;background:var(--surface)}
+.accordion-item{border:1px solid var(--border)!important;border-radius:12px!important;margin-bottom:.6rem;overflow:hidden}
+.accordion-button{font-weight:600;font-size:.93rem;background:var(--bg)!important;color:var(--text)!important;box-shadow:none!important}
+.accordion-button:not(.collapsed){color:var(--purple)!important}
+.accordion-body{font-size:.88rem;color:var(--muted)}
 
-        /* ── VIDEO ── */
-        .video-wrap {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            border: 3px solid var(--border);
-        }
-        .video-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+/* ──────────── CTA FINAL ──────────── */
+.cta-section{padding:80px 0;background:linear-gradient(140deg,var(--purple-dk),var(--purple) 55%,#a855f7);color:#fff;text-align:center}
+.cta-section h2{font-size:clamp(1.7rem,4vw,2.6rem);font-weight:900;margin-bottom:.75rem}
+.cta-card{background:rgba(255,255,255,.13);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.22);border-radius:20px;padding:2rem;max-width:520px;margin:0 auto}
+.wa-big{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;background:#fff;color:var(--purple);font-weight:800;font-size:1.05rem;padding:.95rem 2rem;border-radius:50px;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.2);transition:transform .22s,box-shadow .22s;border:none;cursor:pointer;width:100%}
+.wa-big:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(0,0,0,.28);color:var(--purple)}
 
-        /* ── STORIES (SHORTS) ── */
-        .stories-section { padding: 70px 0; background: var(--bg); }
-        .shorts-outer { position: relative; }
-        .shorts-scroll {
-            display: flex;
-            gap: 1.25rem;
-            overflow-x: auto;
-            padding: 1rem .25rem 1.25rem;
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: thin;
-            scrollbar-color: var(--purple) var(--purple-lt);
-        }
-        .shorts-scroll::-webkit-scrollbar { height: 6px; }
-        .shorts-scroll::-webkit-scrollbar-track { background: var(--purple-lt); border-radius: 3px; }
-        .shorts-scroll::-webkit-scrollbar-thumb { background: var(--purple); border-radius: 3px; }
-        .short-card {
-            flex-shrink: 0;
-            width: 300px; height: 535px;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            background: #000;
-            transition: transform .25s;
-        }
-        .short-card:hover { transform: scale(1.025); }
-        .short-card iframe { width: 100%; height: 100%; border: none; }
-        .arrow-btn {
-            position: absolute;
-            top: 50%; transform: translateY(-50%);
-            width: 42px; height: 42px;
-            background: var(--surface);
-            border: 1.5px solid var(--border);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            cursor: pointer; z-index: 5;
-            box-shadow: var(--shadow-sm);
-            transition: all .2s;
-            color: var(--purple);
-        }
-        .arrow-btn:hover { background: var(--purple); color: #fff; border-color: var(--purple); }
-        .arrow-btn.prev-btn { left: -8px; }
-        .arrow-btn.next-btn { right: -8px; }
+/* ──────────── FOOTER ──────────── */
+footer{background:var(--text);color:rgba(255,255,255,.55);padding:2rem 0;text-align:center;font-size:.82rem}
 
-        /* ── STEPS ── */
-        .steps-section { padding: 70px 0; background: var(--surface); }
-        .step-card {
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 1.5rem;
-            height: 100%;
-            transition: transform .25s, box-shadow .25s;
-            position: relative;
-        }
-        .step-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
-        .step-num {
-            width: 48px; height: 48px;
-            background: linear-gradient(135deg, var(--purple), var(--purple-dk));
-            color: #fff;
-            font-weight: 900; font-size: 1.2rem;
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            margin-bottom: 1rem;
-        }
-        .step-card h3 { font-size: 1rem; font-weight: 700; color: var(--purple); margin-bottom: .4rem; }
-        .step-card p { font-size: .88rem; color: var(--muted); margin: 0; }
-        .step-tag {
-            display: inline-block;
-            background: var(--purple-lt);
-            color: var(--purple);
-            font-size: .75rem;
-            font-weight: 600;
-            padding: .25rem .65rem;
-            border-radius: 50px;
-            margin-top: .75rem;
-        }
+/* ──────────── FORM MODAL ──────────── */
+.m-overlay{position:fixed;inset:0;background:rgba(30,10,70,.6);backdrop-filter:blur(8px);z-index:2000;display:flex;align-items:flex-start;justify-content:center;padding:1rem;overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .28s}
+.m-overlay.open{opacity:1;visibility:visible}
+.m-box{background:var(--surface);border-radius:20px;width:100%;max-width:460px;box-shadow:0 24px 60px rgba(124,58,237,.3);transform:translateY(20px) scale(.97);transition:transform .28s;position:relative;margin:auto}
+.m-overlay.open .m-box{transform:translateY(0) scale(1)}
+.m-head{padding:1.25rem 1.5rem 1rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:var(--surface);border-radius:20px 20px 0 0;z-index:1}
+.m-head h3{font-size:1.1rem;font-weight:800;color:var(--purple);margin:0}
+.m-close{background:none;border:none;font-size:1.4rem;color:var(--muted);cursor:pointer;line-height:1;padding:.2rem}
+.m-close:hover{color:var(--purple)}
+.m-body{padding:1.25rem 1.5rem 1.5rem;display:flex;flex-direction:column;gap:.9rem}
+.fg label{display:block;font-size:.75rem;font-weight:700;color:var(--text);margin-bottom:.35rem;text-transform:uppercase;letter-spacing:.04em}
+.fg label .req{color:#e11d48}
+.fg input,.fg select{width:100%;padding:.72rem 1rem;border:1.5px solid var(--border);border-radius:10px;font-size:.92rem;font-family:'Inter',sans-serif;color:var(--text);background:var(--bg);outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;appearance:none}
+.fg input:focus,.fg select:focus{border-color:var(--purple);box-shadow:0 0 0 3px rgba(124,58,237,.12);background:#fff}
+.fg input::placeholder{color:#a0aec0}
+.submit-btn{width:100%;padding:.88rem;background:linear-gradient(135deg,var(--purple),var(--purple-dk));color:#fff;font-size:.97rem;font-weight:800;border:none;border-radius:50px;cursor:pointer;box-shadow:var(--sh2);transition:transform .22s,box-shadow .22s;display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:.25rem}
+.submit-btn:hover{transform:translateY(-2px);box-shadow:var(--sh3)}
 
-        /* ── CTA SECTION ── */
-        .cta-section {
-            padding: 80px 0;
-            background: linear-gradient(140deg, var(--purple-dk) 0%, var(--purple) 60%, #a855f7 100%);
-            text-align: center;
-            color: #fff;
-        }
-        .cta-section h2 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; margin-bottom: .75rem; }
-        .cta-section p { font-size: 1.1rem; opacity: .88; margin-bottom: 2rem; }
-        .cta-card {
-            background: rgba(255,255,255,.12);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255,255,255,.2);
-            border-radius: 20px;
-            padding: 2.5rem;
-            max-width: 560px;
-            margin: 0 auto;
-        }
-        .cta-card .wa-big {
-            display: inline-flex;
-            align-items: center;
-            gap: .6rem;
-            background: #fff;
-            color: var(--purple);
-            font-weight: 800;
-            font-size: 1.1rem;
-            padding: 1rem 2.2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            box-shadow: 0 8px 24px rgba(0,0,0,.2);
-            transition: transform .22s, box-shadow .22s;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            justify-content: center;
-        }
-        .cta-card .wa-big:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(0,0,0,.28); }
+/* PRIVACY MODAL */
+.pp-overlay{position:fixed;inset:0;background:rgba(30,10,70,.6);z-index:3000;display:flex;align-items:center;justify-content:center;padding:1rem;opacity:0;visibility:hidden;transition:opacity .25s}
+.pp-overlay.open{opacity:1;visibility:visible}
+.pp-box{background:#fff;border-radius:16px;width:100%;max-width:500px;max-height:85vh;overflow-y:auto;box-shadow:0 20px 50px rgba(124,58,237,.25);padding:1.5rem;position:relative}
+.pp-box h2{color:var(--purple);font-size:1.15rem;font-weight:800;margin-bottom:1rem}
+.pp-box h4{color:var(--purple);font-size:.85rem;font-weight:700;margin:1rem 0 .35rem}
+.pp-box p{font-size:.85rem;color:var(--muted);margin-bottom:.5rem}
 
-        /* ── FOOTER ── */
-        footer {
-            background: var(--text);
-            color: rgba(255,255,255,.6);
-            padding: 2rem 0;
-            text-align: center;
-            font-size: .85rem;
-        }
-        footer a { color: var(--accent); text-decoration: none; }
-        footer .ig-link {
-            display: inline-flex; align-items: center; gap: .4rem;
-            background: linear-gradient(135deg,#833ab4,#e1306c);
-            color: #fff;
-            padding: .5rem 1.2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: .85rem;
-            text-decoration: none;
-            margin: .5rem auto;
-        }
-
-        /* ── POPUP FORM MODAL ── */
-        .modal-overlay {
-            position: fixed; inset: 0;
-            background: rgba(30,10,70,.55);
-            backdrop-filter: blur(6px);
-            z-index: 2000;
-            display: flex; align-items: center; justify-content: center;
-            opacity: 0; visibility: hidden;
-            transition: opacity .28s;
-        }
-        .modal-overlay.open { opacity: 1; visibility: visible; }
-        .modal-box {
-            background: var(--surface);
-            border-radius: 20px;
-            width: 92%; max-width: 480px;
-            max-height: 92vh;
-            overflow-y: auto;
-            box-shadow: 0 24px 60px rgba(124,58,237,.3);
-            transform: translateY(20px) scale(.97);
-            transition: transform .28s;
-            position: relative;
-        }
-        .modal-overlay.open .modal-box { transform: translateY(0) scale(1); }
-        .modal-head {
-            padding: 1.5rem 1.5rem 1rem;
-            border-bottom: 1px solid var(--border);
-            display: flex; align-items: center; justify-content: space-between;
-        }
-        .modal-head h3 { font-size: 1.2rem; font-weight: 800; color: var(--purple); margin: 0; }
-        .modal-close {
-            background: none; border: none; font-size: 1.5rem;
-            color: var(--muted); cursor: pointer; line-height: 1;
-            transition: color .2s;
-        }
-        .modal-close:hover { color: var(--purple); }
-        .modal-body { padding: 1.5rem; }
-        .form-group { margin-bottom: 1.1rem; }
-        .form-group label {
-            display: block;
-            font-size: .82rem; font-weight: 700;
-            color: var(--text); margin-bottom: .4rem;
-            text-transform: uppercase; letter-spacing: .04em;
-        }
-        .form-group label .req { color: #e11d48; }
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: .75rem 1rem;
-            border: 1.5px solid var(--border);
-            border-radius: 10px;
-            font-size: .95rem;
-            font-family: 'Inter', sans-serif;
-            color: var(--text);
-            background: var(--bg);
-            outline: none;
-            transition: border-color .2s, box-shadow .2s;
-            appearance: none;
-        }
-        .form-group input:focus,
-        .form-group select:focus {
-            border-color: var(--purple);
-            box-shadow: 0 0 0 3px rgba(124,58,237,.12);
-            background: #fff;
-        }
-        .form-group input::placeholder { color: #a0aec0; }
-        .submit-btn {
-            width: 100%;
-            padding: .95rem;
-            background: linear-gradient(135deg, var(--purple), var(--purple-dk));
-            color: #fff;
-            font-size: 1rem; font-weight: 800;
-            border: none; border-radius: 50px;
-            cursor: pointer;
-            box-shadow: var(--shadow-md);
-            transition: transform .22s, box-shadow .22s;
-            display: flex; align-items: center; justify-content: center; gap: .5rem;
-        }
-        .submit-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
-
-        /* ── PRIVACY MODAL ── */
-        .pp-overlay { position: fixed; inset: 0; background: rgba(30,10,70,.6); z-index: 3000; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity .25s; }
-        .pp-overlay.open { opacity: 1; visibility: visible; }
-        .pp-box { background: #fff; border-radius: 16px; width: 90%; max-width: 520px; max-height: 85vh; overflow-y: auto; box-shadow: 0 20px 50px rgba(124,58,237,.25); padding: 1.5rem; }
-        .pp-box h2 { color: var(--purple); font-size: 1.2rem; font-weight: 800; margin-bottom: 1rem; }
-        .pp-box h4 { color: var(--purple); font-size: .9rem; font-weight: 700; margin: 1rem 0 .4rem; }
-        .pp-box p { font-size: .88rem; color: var(--muted); margin-bottom: .5rem; }
-        .pp-close-btn { float: right; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--muted); }
-
-        @media (max-width: 768px) {
-            .hero { padding: 60px 0 40px; }
-            .about-section, .stories-section, .steps-section { padding: 50px 0; }
-            .h-stat { min-width: 110px; padding: .8rem 1rem; }
-            .arrow-btn { display: none; }
-            .short-card { width: 260px; height: 462px; }
-            .cta-card { padding: 1.5rem 1rem; }
-        }
-        @media (prefers-reduced-motion: reduce) { *, ::before, ::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
-    </style>
+/* MOBILE */
+@media(max-width:991px){
+  .hero{padding:50px 0 0}
+  .hero-text-col{padding:0 1rem 1.5rem;text-align:center}
+  .hero .sub{margin:0 auto 1.5rem}
+  .hero-stats{justify-content:center}
+  .btn-primary-custom{width:auto;padding:.85rem 1.8rem}
+  .video-wrap{border-radius:16px;border:3px solid var(--border)}
+  .hero-video-col{padding:0 1rem 2rem}
+  .arr{display:none}
+  .short-card{width:240px;height:427px}
+  .m-overlay{padding:.5rem;align-items:flex-end}
+  .m-box{border-radius:20px 20px 16px 16px;max-height:92vh;overflow-y:auto}
+}
+@media(max-width:480px){
+  .h-stat{min-width:80px;padding:.7rem .8rem}
+  .h-stat .num{font-size:1.2rem}
+  .hero h1{font-size:1.7rem}
+  .short-card{width:220px;height:391px}
+}
+@media(prefers-reduced-motion:reduce){*,::before,::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-    <div class="nav-inner">
-        <a href="#" class="nav-logo">✨ Salma Khatoon</a>
-        <button class="cta-btn" onclick="openForm()" style="padding:.6rem 1.4rem;font-size:.88rem;">
-            📲 Join Now
-        </button>
-    </div>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">✨ Salma Khatoon</a>
+    <button class="nav-cta" onclick="openForm()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.22 12.9 19.79 19.79 0 0 1 1.15 4.27 2 2 0 0 1 3.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Join Now
+    </button>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-    <div class="container">
-        <div class="pill-badge">🚀 1000+ Successful Students</div>
-        <h1 class="mt-3">
-            Build a Real <span class="g-text">Side Hustle</span><br>From Home
-        </h1>
-        <p class="sub">Students, Housewives & Working Professionals — building financial freedom with Salma Khatoon</p>
-        <button class="cta-btn" onclick="openForm()" style="font-size:1.1rem;padding:1rem 2.4rem;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.22 12.9 19.79 19.79 0 0 1 1.15 4.27 2 2 0 0 1 3.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Get Started Free
+  <div class="container">
+    <div class="row align-items-end g-0">
+      <div class="col-lg-6 hero-text-col">
+        <div class="pill mb-3">🚀 1000+ Students Joined</div>
+        <h1>Build a Real <span class="g-text">Side Hustle</span> From Home</h1>
+        <p class="sub">Students, Housewives & Working Professionals earning online with Salma Khatoon's proven system.</p>
+        <button class="btn-primary-custom" onclick="openForm()" style="width:auto;padding:.9rem 2rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.22 12.9 19.79 19.79 0 0 1 1.15 4.27 2 2 0 0 1 3.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Get Started — Free
         </button>
         <div class="hero-stats">
-            <div class="h-stat"><div class="num counter" data-target="1000" data-suffix="+">0</div><div class="lbl">Students Trained</div></div>
-            <div class="h-stat"><div class="num counter" data-target="5" data-suffix="+">0</div><div class="lbl">Years Experience</div></div>
-            <div class="h-stat"><div class="num counter" data-target="100" data-suffix="%">0</div><div class="lbl">Practical Learning</div></div>
-            <div class="h-stat"><div class="num">24/7</div><div class="lbl">Mentor Support</div></div>
+          <div class="h-stat"><div class="num counter" data-target="1000" data-suffix="+">0</div><div class="lbl">Students</div></div>
+          <div class="h-stat"><div class="num counter" data-target="5" data-suffix="+">0</div><div class="lbl">Yrs Exp</div></div>
+          <div class="h-stat"><div class="num">24/7</div><div class="lbl">Support</div></div>
+          <div class="h-stat"><div class="num counter" data-target="100" data-suffix="%">0</div><div class="lbl">Practical</div></div>
         </div>
+      </div>
+      <div class="col-lg-6 hero-video-col">
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/ZznRwNgpaZc" title="Salma Khatoon Introduction" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about-section">
-    <div class="container">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-5 text-center">
-                <img
-                    src="https://i.ibb.co/ytN7kny/Whats-App-Image-2026-06-25-at-22-19-58.jpg"
-                    alt="Salma Khatoon"
-                    class="about-photo"
-                    loading="eager"
-                    onerror="this.style.background='var(--purple-lt)'"
-                />
-                <div class="pill-badge mb-3">Your Mentor</div>
-                <h2 style="font-size:1.8rem;font-weight:900;color:var(--text);">Salma Khatoon</h2>
-                <p style="color:var(--muted);font-size:.95rem;margin-top:.5rem;">Side Hustle Coach &amp; Digital Skills Mentor</p>
-                <button class="cta-btn mt-3" onclick="openForm()">
-                    📲 Connect with Me
-                </button>
-            </div>
-            <div class="col-lg-7">
-                <div class="video-wrap mb-4">
-                    <iframe src="https://www.youtube.com/embed/ZznRwNgpaZc" title="Salma Khatoon Introduction" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="row g-3 mt-1">
-                    <div class="col-sm-6">
-                        <div class="about-card">
-                            <div class="icon">🎯</div>
-                            <h4>Real Skills</h4>
-                            <p>Social Media, Content Creation, Affiliate Marketing — all skill-based.</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="about-card">
-                            <div class="icon">💻</div>
-                            <h4>Work Anywhere</h4>
-                            <p>Just 1–2 hours daily from your phone or laptop.</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="about-card">
-                            <div class="icon">🌱</div>
-                            <h4>No Experience Needed</h4>
-                            <p>We start from zero and guide you step by step.</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="about-card">
-                            <div class="icon">💰</div>
-                            <h4>Multiple Income Streams</h4>
-                            <p>Don't depend on one source. Unlock many opportunities.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- MENTOR / ABOUT -->
+<section class="mentor-section">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <!-- PHOTO — full rectangular, no crop -->
+      <div class="col-lg-4 col-md-5 text-center">
+        <div class="mentor-photo-box">
+          <img src="https://i.ibb.co/ytN7kny/Whats-App-Image-2026-06-25-at-22-19-58.jpg" alt="Salma Khatoon" loading="eager">
         </div>
+        <button class="btn-primary-custom mt-4" onclick="openForm()" style="max-width:260px;margin:1rem auto 0">
+          📲 Connect with Me
+        </button>
+      </div>
+      <!-- INFO -->
+      <div class="col-lg-8 col-md-7">
+        <div class="pill mb-3">Your Mentor</div>
+        <h2 style="font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:900;margin-bottom:.4rem">Hi, I'm <span class="g-text">Salma Khatoon</span></h2>
+        <p style="color:var(--muted);font-size:.95rem;margin-bottom:1.5rem">Side Hustle Coach · Digital Skills Mentor · 5+ Years Experience</p>
+        <div class="row g-3">
+          <div class="col-sm-6"><div class="info-card"><div class="ic-icon">🎯</div><h4>Real Skills</h4><p>Social Media, Content Creation, Affiliate Marketing — all 100% legitimate.</p></div></div>
+          <div class="col-sm-6"><div class="info-card"><div class="ic-icon">💻</div><h4>Work Anywhere</h4><p>Just 1–2 hrs daily from your phone or laptop — students & housewives friendly.</p></div></div>
+          <div class="col-sm-6"><div class="info-card"><div class="ic-icon">🌱</div><h4>Zero Experience Needed</h4><p>We start from scratch. You'll be guided every single step of the way.</p></div></div>
+          <div class="col-sm-6"><div class="info-card"><div class="ic-icon">💰</div><h4>Multiple Income Streams</h4><p>Unlock many earning opportunities — don't depend on a single source.</p></div></div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- SUCCESS STORIES -->
 <section class="stories-section">
-    <div class="container">
-        <div class="text-center mb-4">
-            <div class="pill-badge">Real Stories</div>
-            <h2 style="font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;margin-top:.75rem;">What Students Say</h2>
-            <p style="color:var(--muted);">Swipe to explore their journeys</p>
-        </div>
-        <div class="shorts-outer">
-            <button class="arrow-btn prev-btn" id="prevBtn" aria-label="Previous">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-            </button>
-            <div class="shorts-scroll" id="shortsScroll">
-                <div class="short-card"><iframe src="https://www.youtube.com/embed/nWWQgcC3Fbs" title="Story 1" allowfullscreen loading="lazy"></iframe></div>
-                <div class="short-card"><iframe src="https://www.youtube.com/embed/W38bb_hSA8U" title="Story 2" allowfullscreen loading="lazy"></iframe></div>
-                <div class="short-card"><iframe src="https://www.youtube.com/embed/l3lDwyVl8hg" title="Story 3" allowfullscreen loading="lazy"></iframe></div>
-                <div class="short-card"><iframe src="https://www.youtube.com/embed/6CouaVAy_oQ" title="Story 4" allowfullscreen loading="lazy"></iframe></div>
-                <div class="short-card"><iframe src="https://www.youtube.com/embed/2SO5x40LbOQ" title="Story 5" allowfullscreen loading="lazy"></iframe></div>
-            </div>
-            <button class="arrow-btn next-btn" id="nextBtn" aria-label="Next">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-            </button>
-        </div>
+  <div class="container">
+    <div class="text-center mb-4">
+      <div class="pill">Real Stories</div>
+      <h2 style="font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:900;margin-top:.7rem">What Students Say</h2>
+      <p style="color:var(--muted);font-size:.88rem">Swipe to explore their journeys →</p>
     </div>
+    <div class="shorts-outer">
+      <button class="arr prev" id="prevBtn" aria-label="Previous"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+      <div class="shorts-scroll" id="shortsScroll">
+        <div class="short-card"><iframe src="https://www.youtube.com/embed/nWWQgcC3Fbs" title="Story 1" allowfullscreen loading="lazy"></iframe></div>
+        <div class="short-card"><iframe src="https://www.youtube.com/embed/W38bb_hSA8U" title="Story 2" allowfullscreen loading="lazy"></iframe></div>
+        <div class="short-card"><iframe src="https://www.youtube.com/embed/l3lDwyVl8hg" title="Story 3" allowfullscreen loading="lazy"></iframe></div>
+        <div class="short-card"><iframe src="https://www.youtube.com/embed/6CouaVAy_oQ" title="Story 4" allowfullscreen loading="lazy"></iframe></div>
+        <div class="short-card"><iframe src="https://www.youtube.com/embed/2SO5x40LbOQ" title="Story 5" allowfullscreen loading="lazy"></iframe></div>
+      </div>
+      <button class="arr next" id="nextBtn" aria-label="Next"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+    </div>
+  </div>
 </section>
 
 <!-- STEPS -->
 <section class="steps-section">
-    <div class="container">
-        <div class="text-center mb-4">
-            <div class="pill-badge">The Process</div>
-            <h2 style="font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;margin-top:.75rem;">What Happens After You Join?</h2>
-        </div>
-        <div class="row g-3">
-            <div class="col-md-6 col-lg-3">
-                <div class="step-card">
-                    <div class="step-num">1</div>
-                    <h3>Instant Access</h3>
-                    <p>Direct WhatsApp connection with Salma — a proven day-one blueprint.</p>
-                    <span class="step-tag">🗺️ Real Roadmap</span>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="step-card">
-                    <div class="step-num">2</div>
-                    <h3>Full Training System</h3>
-                    <p>Structured step-by-step program with a mentor who built 7-figure income.</p>
-                    <span class="step-tag">🤝 24×7 Support</span>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="step-card">
-                    <div class="step-num">3</div>
-                    <h3>Daily Mentorship</h3>
-                    <p>Community, daily check-ins, and real freelancing skill-building.</p>
-                    <span class="step-tag">💼 Freelance Clients</span>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="step-card">
-                    <div class="step-num">4</div>
-                    <h3>Start Earning</h3>
-                    <p>Most students see their first results within the first 30 days.</p>
-                    <span class="step-tag">💰 Week 1 Ready</span>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-4">
-            <button class="cta-btn" onclick="openForm()" style="font-size:1.05rem;padding:.95rem 2.2rem;">
-                📲 Join Now — It's Free to Start
-            </button>
-        </div>
+  <div class="container">
+    <div class="text-center mb-4">
+      <div class="pill">The Process</div>
+      <h2 style="font-size:clamp(1.5rem,3.5vw,2.2rem);font-weight:900;margin-top:.7rem">What Happens After You Join?</h2>
     </div>
+    <div class="row g-3">
+      <div class="col-6 col-lg-3"><div class="step-card"><div class="step-num">1</div><h3>Instant Access</h3><p>Direct WhatsApp link with Salma + a proven day-one roadmap.</p><span class="step-tag">🗺️ Blueprint</span></div></div>
+      <div class="col-6 col-lg-3"><div class="step-card"><div class="step-num">2</div><h3>Full Training</h3><p>Step-by-step program from a mentor who built 7-figure income.</p><span class="step-tag">🤝 24×7 Support</span></div></div>
+      <div class="col-6 col-lg-3"><div class="step-card"><div class="step-num">3</div><h3>Daily Mentorship</h3><p>Community, check-ins, and real freelancing skill-building.</p><span class="step-tag">💼 Freelance</span></div></div>
+      <div class="col-6 col-lg-3"><div class="step-card"><div class="step-num">4</div><h3>Start Earning</h3><p>Most students see first results within 30 days.</p><span class="step-tag">💰 Week 1 Ready</span></div></div>
+    </div>
+    <div class="text-center mt-4">
+      <button class="btn-primary-custom" onclick="openForm()" style="width:auto;padding:.9rem 2.2rem;">📲 Join Now — Free to Start</button>
+    </div>
+  </div>
 </section>
 
 <!-- STATS -->
-<section style="padding:60px 0;background:var(--bg);">
-    <div class="container">
-        <div class="text-center mb-4">
-            <div class="pill-badge">Impact</div>
-            <h2 style="font-size:clamp(1.6rem,4vw,2.2rem);font-weight:900;margin-top:.75rem;color:var(--purple);">🔥 Now It's YOUR Time</h2>
-        </div>
-        <div class="row g-3 justify-content-center">
-            <div class="col-6 col-md-3">
-                <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center;box-shadow:var(--shadow-sm);">
-                    <div style="font-size:2rem;font-weight:900;color:var(--purple);"><span class="counter" data-target="1000" data-suffix="+">0</span></div>
-                    <div style="font-size:.82rem;color:var(--muted);margin-top:.3rem;">Students Trained</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center;box-shadow:var(--shadow-sm);">
-                    <div style="font-size:2rem;font-weight:900;color:var(--purple);">₹<span class="counter" data-target="500000" data-suffix="+">0</span></div>
-                    <div style="font-size:.82rem;color:var(--muted);margin-top:.3rem;">Earned by Students</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center;box-shadow:var(--shadow-sm);">
-                    <div style="font-size:2rem;font-weight:900;color:var(--purple);"><span class="counter" data-target="100" data-suffix="+">0</span></div>
-                    <div style="font-size:.82rem;color:var(--muted);margin-top:.3rem;">Active Earners</div>
-                </div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.5rem;text-align:center;box-shadow:var(--shadow-sm);">
-                    <div style="font-size:2rem;font-weight:900;color:var(--purple);"><span class="counter" data-target="5" data-suffix="+">0</span></div>
-                    <div style="font-size:.82rem;color:var(--muted);margin-top:.3rem;">Years Experience</div>
-                </div>
-            </div>
-        </div>
+<section class="stats-section">
+  <div class="container">
+    <div class="text-center mb-4">
+      <div class="pill">Impact</div>
+      <h2 style="font-size:clamp(1.4rem,3vw,2rem);font-weight:900;margin-top:.7rem;color:var(--purple)">🔥 Now It's YOUR Time</h2>
     </div>
+    <div class="row g-3 justify-content-center">
+      <div class="col-6 col-md-3"><div class="stat-tile"><div class="big counter" data-target="1000" data-suffix="+">0</div><div class="lbl">Students Trained</div></div></div>
+      <div class="col-6 col-md-3"><div class="stat-tile"><div class="big">₹<span class="counter" data-target="500000" data-suffix="+">0</span></div><div class="lbl">Earned by Students</div></div></div>
+      <div class="col-6 col-md-3"><div class="stat-tile"><div class="big counter" data-target="100" data-suffix="+">0</div><div class="lbl">Active Earners</div></div></div>
+      <div class="col-6 col-md-3"><div class="stat-tile"><div class="big counter" data-target="5" data-suffix="+">0</div><div class="lbl">Years Experience</div></div></div>
+    </div>
+  </div>
 </section>
 
 <!-- FAQ -->
-<section style="padding:70px 0;background:var(--surface);">
-    <div class="container">
-        <div class="text-center mb-4">
-            <div class="pill-badge">FAQ</div>
-            <h2 style="font-size:clamp(1.6rem,4vw,2.2rem);font-weight:900;margin-top:.75rem;">Common Questions</h2>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="accordion" id="faq">
-                    <div class="accordion-item" style="border:1px solid var(--border);border-radius:12px!important;margin-bottom:.6rem;overflow:hidden;">
-                        <h2 class="accordion-header"><button class="accordion-button" style="font-weight:600;background:var(--bg);" data-bs-toggle="collapse" data-bs-target="#f1">What kind of work will I do?</button></h2>
-                        <div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body" style="font-size:.92rem;color:var(--muted);">Digital skills: Social Media Management, Content Creation, Affiliate Marketing and more — 100% real and skill-based work.</div></div>
-                    </div>
-                    <div class="accordion-item" style="border:1px solid var(--border);border-radius:12px!important;margin-bottom:.6rem;overflow:hidden;">
-                        <h2 class="accordion-header"><button class="accordion-button collapsed" style="font-weight:600;background:var(--bg);" data-bs-toggle="collapse" data-bs-target="#f2">Is this program safe &amp; legit?</button></h2>
-                        <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body" style="font-size:.92rem;color:var(--muted);">Absolutely. We focus on real, in-demand skills. 1000+ students are already earning through this system.</div></div>
-                    </div>
-                    <div class="accordion-item" style="border:1px solid var(--border);border-radius:12px!important;margin-bottom:.6rem;overflow:hidden;">
-                        <h2 class="accordion-header"><button class="accordion-button collapsed" style="font-weight:600;background:var(--bg);" data-bs-toggle="collapse" data-bs-target="#f3">How much time do I need daily?</button></h2>
-                        <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body" style="font-size:.92rem;color:var(--muted);">Just 1–2 hours a day. Fully flexible — designed for students, job holders, and housewives.</div></div>
-                    </div>
-                    <div class="accordion-item" style="border:1px solid var(--border);border-radius:12px!important;margin-bottom:.6rem;overflow:hidden;">
-                        <h2 class="accordion-header"><button class="accordion-button collapsed" style="font-weight:600;background:var(--bg);" data-bs-toggle="collapse" data-bs-target="#f4">When will I start earning?</button></h2>
-                        <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body" style="font-size:.92rem;color:var(--muted);">Most students see results within the first month, depending on consistency and effort.</div></div>
-                    </div>
-                    <div class="accordion-item" style="border:1px solid var(--border);border-radius:12px!important;overflow:hidden;">
-                        <h2 class="accordion-header"><button class="accordion-button collapsed" style="font-weight:600;background:var(--bg);" data-bs-toggle="collapse" data-bs-target="#f5">Do I need prior experience?</button></h2>
-                        <div id="f5" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body" style="font-size:.92rem;color:var(--muted);">No experience needed. We start from scratch and guide you every step of the way.</div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section class="faq-section">
+  <div class="container">
+    <div class="text-center mb-4">
+      <div class="pill">FAQ</div>
+      <h2 style="font-size:clamp(1.4rem,3vw,2rem);font-weight:900;margin-top:.7rem">Common Questions</h2>
     </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="accordion" id="faq">
+          <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#f1">What kind of work will I do?</button></h2><div id="f1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body">Social Media Management, Content Creation, Affiliate Marketing and more — all real, skill-based work.</div></div></div>
+          <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f2">Is this safe &amp; legit?</button></h2><div id="f2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">100%. We focus on in-demand digital skills. 1000+ students are already earning.</div></div></div>
+          <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f3">How much time daily?</button></h2><div id="f3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Just 1–2 hours. Fully flexible — designed for students, job holders, and housewives.</div></div></div>
+          <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f4">When will I start earning?</button></h2><div id="f4" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Most students see results within the first month with consistent effort.</div></div></div>
+          <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f5">Any prior experience needed?</button></h2><div id="f5" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">None. We start from zero and guide you every step of the way.</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- CTA FINAL -->
+<!-- FINAL CTA -->
 <section class="cta-section">
-    <div class="container">
-        <div class="pill-badge" style="background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.3);">Limited Spots Available</div>
-        <h2 class="mt-3">Ready to Transform Your Life?</h2>
-        <p>Fill in your details and I'll reach out within 24 hours</p>
-        <div class="cta-card">
-            <button class="wa-big" onclick="openForm()">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.22 12.9 19.79 19.79 0 0 1 1.15 4.27 2 2 0 0 1 3.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                Apply on WhatsApp
-            </button>
-            <p style="color:rgba(255,255,255,.7);font-size:.82rem;margin-top:1rem;margin-bottom:0;">Save number: <strong style="color:#fff;">7303984001</strong></p>
-        </div>
+  <div class="container">
+    <div class="pill" style="background:rgba(255,255,255,.15);color:#fff;border-color:rgba(255,255,255,.3)">Limited Spots</div>
+    <h2 class="mt-3">Ready to Transform Your Life?</h2>
+    <p style="opacity:.85;font-size:1rem;margin-bottom:2rem">Fill in your details — I'll reach out within 24 hours.</p>
+    <div class="cta-card">
+      <button class="wa-big" onclick="openForm()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.22 12.9 19.79 19.79 0 0 1 1.15 4.27 2 2 0 0 1 3.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Apply on WhatsApp
+      </button>
+      <p style="color:rgba(255,255,255,.65);font-size:.8rem;margin-top:.85rem;margin-bottom:0">Save number: <strong style="color:#fff">7303984001</strong></p>
     </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-    <div class="container">
-        <a href="https://www.instagram.com/coach.ishika?igsh=MTF3cGNrMzkyMzNmOQ==" target="_blank" class="ig-link" style="display:inline-flex;align-items:center;gap:.4rem;background:linear-gradient(135deg,#833ab4,#e1306c);color:#fff;padding:.5rem 1.2rem;border-radius:50px;font-weight:600;font-size:.85rem;text-decoration:none;margin-bottom:1rem;">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-            Follow on Instagram
-        </a>
-        <br>
-        <button onclick="openPrivacy()" style="background:none;border:none;color:rgba(255,255,255,.5);font-size:.82rem;cursor:pointer;text-decoration:underline;">Privacy Policy</button>
-        <p style="margin-top:.75rem;">© 2026 Salma Khatoon — All Rights Reserved</p>
-    </div>
+  <div class="container">
+    <a href="https://www.instagram.com/coach.ishika?igsh=MTF3cGNrMzkyMzNmOQ==" target="_blank" style="display:inline-flex;align-items:center;gap:.4rem;background:linear-gradient(135deg,#833ab4,#e1306c);color:#fff;padding:.5rem 1.2rem;border-radius:50px;font-weight:600;font-size:.82rem;text-decoration:none;margin-bottom:.85rem">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      Follow on Instagram
+    </a><br>
+    <button onclick="openPrivacy()" style="background:none;border:none;color:rgba(255,255,255,.45);font-size:.78rem;cursor:pointer;text-decoration:underline;margin-bottom:.5rem">Privacy Policy</button>
+    <p>© 2026 Salma Khatoon · All Rights Reserved</p>
+  </div>
 </footer>
 
-<!-- ====== POPUP FORM MODAL ====== -->
-<div class="modal-overlay" id="formModal">
-    <div class="modal-box">
-        <div class="modal-head">
-            <h3>📲 Join Salma's Program</h3>
-            <button class="modal-close" onclick="closeForm()">&times;</button>
-        </div>
-        <div class="modal-body">
-            <p style="font-size:.88rem;color:var(--muted);margin-bottom:1.25rem;">Fill in your details — you'll be redirected to WhatsApp instantly!</p>
-            <div class="form-group">
-                <label>Full Name <span class="req">*</span></label>
-                <input type="text" id="f_name" placeholder="Enter your full name" required>
-            </div>
-            <div class="form-group">
-                <label>Phone Number <span class="req">*</span></label>
-                <input type="tel" id="f_phone" placeholder="e.g. 9876543210" required>
-            </div>
-            <div class="form-group">
-                <label>Age <span class="req">*</span></label>
-                <input type="number" id="f_age" placeholder="Your age" min="10" max="80" required>
-            </div>
-            <div class="form-group">
-                <label>Gender <span class="req">*</span></label>
-                <select id="f_gender" required>
-                    <option value="" disabled selected>Select Gender</option>
-                    <option value="Female">Female</option>
-                    <option value="Male">Male</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Profession <span class="req">*</span></label>
-                <select id="f_profession" required>
-                    <option value="" disabled selected>Select Profession</option>
-                    <option value="Student">Student</option>
-                    <option value="Housewife">Housewife</option>
-                    <option value="Working Professional">Working Professional</option>
-                    <option value="Freelancer">Freelancer</option>
-                    <option value="Business Owner">Business Owner</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-            <button class="submit-btn" onclick="submitForm()">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.22 12.9 19.79 19.79 0 0 1 1.15 4.27 2 2 0 0 1 3.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                Submit &amp; Open WhatsApp
-            </button>
-        </div>
+<!-- ======= FORM MODAL ======= -->
+<div class="m-overlay" id="formModal">
+  <div class="m-box">
+    <div class="m-head">
+      <h3>📲 Join Salma's Program</h3>
+      <button class="m-close" onclick="closeForm()" aria-label="Close">&times;</button>
     </div>
+    <div class="m-body">
+      <p style="font-size:.84rem;color:var(--muted);margin:0">Fill details below — WhatsApp will open instantly after submit!</p>
+      <div class="fg">
+        <label>Full Name <span class="req">*</span></label>
+        <input type="text" id="f_name" placeholder="Enter your full name" autocomplete="name">
+      </div>
+      <div class="fg">
+        <label>Phone Number <span class="req">*</span></label>
+        <input type="tel" id="f_phone" placeholder="e.g. 9876543210" autocomplete="tel" inputmode="numeric">
+      </div>
+      <div class="fg">
+        <label>Age <span class="req">*</span></label>
+        <input type="number" id="f_age" placeholder="Your age" min="10" max="80" inputmode="numeric">
+      </div>
+      <div class="fg">
+        <label>Gender <span class="req">*</span></label>
+        <select id="f_gender">
+          <option value="" disabled selected>Select Gender</option>
+          <option>Female</option>
+          <option>Male</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Profession <span class="req">*</span></label>
+        <select id="f_profession">
+          <option value="" disabled selected>Select Profession</option>
+          <option>Student</option>
+          <option>Housewife</option>
+          <option>Working Professional</option>
+          <option>Freelancer</option>
+          <option>Business Owner</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <button class="submit-btn" onclick="submitForm()">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.22 12.9 19.79 19.79 0 0 1 1.15 4.27 2 2 0 0 1 3.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Submit &amp; Open WhatsApp
+      </button>
+    </div>
+  </div>
 </div>
 
 <!-- PRIVACY MODAL -->
 <div class="pp-overlay" id="ppOverlay">
-    <div class="pp-box">
-        <button class="pp-close-btn" onclick="closePrivacy()">&times;</button>
-        <h2>🔒 Privacy Policy</h2>
-        <h4>Information We Collect</h4>
-        <p>We collect your name, phone number, and details you share with us via WhatsApp or our form.</p>
-        <h4>How We Use It</h4>
-        <p>Your information is used only to communicate about our training programs and provide support.</p>
-        <h4>Data Protection</h4>
-        <p>We never sell or share your data with third parties for marketing.</p>
-        <h4>Your Rights</h4>
-        <p>You may request to access, correct, or delete your data at any time.</p>
-        <p style="margin-top:1rem;font-size:.8rem;color:var(--purple);font-weight:600;">Last updated: April 2026</p>
-    </div>
+  <div class="pp-box">
+    <button onclick="closePrivacy()" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--muted)">&times;</button>
+    <h2>🔒 Privacy Policy</h2>
+    <h4>Information We Collect</h4><p>Your name, phone number, and details shared via our form or WhatsApp.</p>
+    <h4>How We Use It</h4><p>Only to communicate about training programs and provide support.</p>
+    <h4>Data Protection</h4><p>We never sell or share your data with third parties.</p>
+    <h4>Your Rights</h4><p>Request access, correction, or deletion of your data anytime.</p>
+    <p style="margin-top:1rem;font-size:.78rem;color:var(--purple);font-weight:700">Last updated: April 2026</p>
+  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-/* ── COUNTER ── */
-const counterObserver = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-        if (e.isIntersecting && !e.target.classList.contains('counted')) {
-            e.target.classList.add('counted');
-            const target = +e.target.dataset.target;
-            const suffix = e.target.dataset.suffix || '';
-            let cur = 0;
-            const step = Math.max(1, Math.ceil(target / 60));
-            const t = setInterval(() => {
-                cur = Math.min(cur + step, target);
-                e.target.textContent = cur.toLocaleString('en-IN') + suffix;
-                if (cur >= target) clearInterval(t);
-            }, 25);
-        }
-    });
-}, { threshold: 0.3 });
-document.querySelectorAll('.counter').forEach(c => counterObserver.observe(c));
+/* COUNTER */
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting || e.target.classList.contains('counted')) return;
+    e.target.classList.add('counted');
+    const tgt = +e.target.dataset.target, sfx = e.target.dataset.suffix||'';
+    let cur = 0; const step = Math.max(1, Math.ceil(tgt/60));
+    const t = setInterval(() => { cur = Math.min(cur+step,tgt); e.target.textContent = cur.toLocaleString('en-IN')+sfx; if(cur>=tgt)clearInterval(t); }, 25);
+  });
+}, {threshold:.3});
+document.querySelectorAll('.counter').forEach(c => obs.observe(c));
 
-/* ── SHORTS SCROLL ── */
-const scroll = document.getElementById('shortsScroll');
-document.getElementById('prevBtn').addEventListener('click', () => scroll.scrollBy({ left: -320, behavior: 'smooth' }));
-document.getElementById('nextBtn').addEventListener('click', () => scroll.scrollBy({ left: 320, behavior: 'smooth' }));
+/* SCROLL */
+const sc = document.getElementById('shortsScroll');
+document.getElementById('prevBtn').onclick = () => sc.scrollBy({left:-300,behavior:'smooth'});
+document.getElementById('nextBtn').onclick = () => sc.scrollBy({left:300,behavior:'smooth'});
 
-/* ── FORM MODAL ── */
-function openForm() { document.getElementById('formModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
-function closeForm() { document.getElementById('formModal').classList.remove('open'); document.body.style.overflow = ''; }
-document.getElementById('formModal').addEventListener('click', e => { if (e.target === document.getElementById('formModal')) closeForm(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeForm(); closePrivacy(); } });
+/* FORM */
+function openForm() {
+  document.getElementById('formModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeForm() {
+  document.getElementById('formModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('formModal').addEventListener('click', e => {
+  if(e.target === document.getElementById('formModal')) closeForm();
+});
 
 function submitForm() {
-    const name     = document.getElementById('f_name').value.trim();
-    const phone    = document.getElementById('f_phone').value.trim();
-    const age      = document.getElementById('f_age').value.trim();
-    const gender   = document.getElementById('f_gender').value;
-    const prof     = document.getElementById('f_profession').value;
-
-    if (!name)   { alert('Please enter your full name.'); return; }
-    if (!phone || phone.length < 10) { alert('Please enter a valid phone number.'); return; }
-    if (!age)    { alert('Please enter your age.'); return; }
-    if (!gender) { alert('Please select your gender.'); return; }
-    if (!prof)   { alert('Please select your profession.'); return; }
-
-    if (typeof fbq !== 'undefined') fbq('track', 'Lead');
-
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbypnae6O5zDSsx0OY-SobrQY88FeFt8eYHmPf-9htaOEQ3GufMO7Bbt1wBvxBXyVZOJ/exec';
-    const fd = new FormData();
-    fd.append('Source', 'Popup Form');
-    fd.append('Name', name);
-    fd.append('Phone', phone);
-    fd.append('Age', age);
-    fd.append('Gender', gender);
-    fd.append('Profession', prof);
-    fd.append('Timestamp', new Date().toLocaleString('en-IN'));
-    fetch(SCRIPT_URL, { method: 'POST', body: fd, mode: 'no-cors' }).catch(() => {});
-
-    const msg = encodeURIComponent(
-        `Hello Salma! I am interested in your Side Hustle program.\n\nName: ${name}\nPhone: ${phone}\nAge: ${age}\nGender: ${gender}\nProfession: ${prof}`
-    );
-    window.open(`https://wa.me/918802220370?text=${msg}`, '_blank');
-    closeForm();
+  const name  = document.getElementById('f_name').value.trim();
+  const phone = document.getElementById('f_phone').value.trim();
+  const age   = document.getElementById('f_age').value.trim();
+  const gen   = document.getElementById('f_gender').value;
+  const prof  = document.getElementById('f_profession').value;
+  if(!name)  { alert('Please enter your full name.'); return; }
+  if(!phone||phone.length<10) { alert('Please enter a valid 10-digit phone number.'); return; }
+  if(!age)   { alert('Please enter your age.'); return; }
+  if(!gen)   { alert('Please select your gender.'); return; }
+  if(!prof)  { alert('Please select your profession.'); return; }
+  if(typeof fbq!=='undefined') fbq('track','Lead');
+  const fd = new FormData();
+  ['Source','Name','Phone','Age','Gender','Profession','Timestamp'].forEach((k,i) =>
+    fd.append(k, ['Popup Form',name,phone,age,gen,prof,new Date().toLocaleString('en-IN')][i]));
+  fetch('https://script.google.com/macros/s/AKfycbypnae6O5zDSsx0OY-SobrQY88FeFt8eYHmPf-9htaOEQ3GufMO7Bbt1wBvxBXyVZOJ/exec',
+    {method:'POST',body:fd,mode:'no-cors'}).catch(()=>{});
+  const msg = encodeURIComponent(`Hello Salma! I am interested in your Side Hustle program.\n\nName: ${name}\nPhone: ${phone}\nAge: ${age}\nGender: ${gen}\nProfession: ${prof}`);
+  window.open(`https://wa.me/918802220370?text=${msg}`, '_blank');
+  closeForm();
 }
 
-/* ── PRIVACY ── */
-function openPrivacy()  { document.getElementById('ppOverlay').classList.add('open'); document.body.style.overflow = 'hidden'; }
-function closePrivacy() { document.getElementById('ppOverlay').classList.remove('open'); document.body.style.overflow = ''; }
-document.getElementById('ppOverlay').addEventListener('click', e => { if (e.target === document.getElementById('ppOverlay')) closePrivacy(); });
+/* PRIVACY */
+function openPrivacy()  { document.getElementById('ppOverlay').classList.add('open'); }
+function closePrivacy() { document.getElementById('ppOverlay').classList.remove('open'); }
+document.getElementById('ppOverlay').addEventListener('click', e => { if(e.target===document.getElementById('ppOverlay'))closePrivacy(); });
+document.addEventListener('keydown', e => { if(e.key==='Escape'){closeForm();closePrivacy();} });
 </script>
 </body>
 </html>
