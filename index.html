@@ -30,11 +30,9 @@ body{
   line-height:1.65;overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
 }
-
-/* ────── WRAP ────── */
 .wrap{width:100%;max-width:480px;margin:0 auto;padding:0 1.1rem}
 
-/* ────── NAV ────── */
+/* NAV */
 nav{
   position:sticky;top:0;z-index:300;
   background:rgba(13,10,26,.9);
@@ -71,7 +69,7 @@ nav{
 .nav-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(124,58,237,.6)}
 .nav-btn svg{width:14px;height:14px}
 
-/* ────── BADGE ────── */
+/* BADGE */
 .badge{
   display:inline-flex;align-items:center;gap:.38rem;
   background:rgba(124,58,237,.15);color:var(--txt2);
@@ -82,7 +80,7 @@ nav{
 }
 .badge svg{width:11px;height:11px}
 
-/* ────── SECTION HEAD ────── */
+/* SECTION HEAD */
 .sec-head{text-align:center;margin-bottom:2rem}
 .sec-title{
   font-family:'Outfit',sans-serif;font-weight:900;line-height:1.1;
@@ -94,7 +92,7 @@ nav{
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
 
-/* ────── BTN ────── */
+/* BUTTONS */
 .btn-p{
   display:flex;align-items:center;justify-content:center;gap:.5rem;
   width:100%;
@@ -120,27 +118,13 @@ nav{
 .btn-g:hover{border-color:var(--boh);background:rgba(124,58,237,.1);color:#fff}
 .btn-g svg{width:16px;height:16px;flex-shrink:0}
 
-/* ═══════════════════════
-   HERO
-═══════════════════════ */
+/* HERO */
 .hero{
   padding:1.5rem 0 1.5rem;
   position:relative;overflow:hidden;
   background:radial-gradient(ellipse 80% 60% at 50% 20%,rgba(124,58,237,.18) 0%,transparent 70%);
 }
-.hero-badge{margin-bottom:1rem;text-align:center}
-.hero h1{
-  font-family:'Outfit',sans-serif;font-weight:900;
-  font-size:clamp(2rem,8vw,2.8rem);line-height:1.08;
-  letter-spacing:-.025em;text-align:center;margin-bottom:.9rem;
-}
-.hero-sub{
-  font-size:.92rem;color:var(--mu);text-align:center;
-  margin-bottom:1.8rem;line-height:1.7;
-}
 .hero-actions{display:flex;flex-direction:column;gap:.7rem;margin-bottom:2rem}
-
-/* stats row */
 .hero-stats{
   display:grid;grid-template-columns:repeat(4,1fr);
   gap:.55rem;margin-bottom:2rem;
@@ -156,7 +140,6 @@ nav{
 }
 .hs .l{font-size:.6rem;color:var(--mu);margin-top:.2rem;line-height:1.3}
 
-/* video */
 .hero-video-wrap{
   padding:0 1.1rem;
   max-width:480px;
@@ -172,11 +155,8 @@ nav{
 .v-ratio{position:relative;padding-bottom:56.25%;height:0}
 .v-ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
 
-/* ═══════════════════════
-   MENTOR
-═══════════════════════ */
+/* MENTOR */
 .mentor{padding:64px 0;background:var(--bg2)}
-
 .mentor-photo{
   width:100%;border-radius:18px;overflow:hidden;
   border:1px solid var(--bo);
@@ -189,12 +169,6 @@ nav{
   background:linear-gradient(to top,rgba(13,10,26,.35) 0%,transparent 50%);
   pointer-events:none;
 }
-
-.mentor-name{
-  font-family:'Outfit',sans-serif;font-weight:900;
-  font-size:1.75rem;line-height:1.05;
-  margin:.6rem 0 .3rem;text-align:center;
-}
 .mentor-role{
   display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem;
   font-size:.78rem;color:var(--mu);margin-bottom:1.5rem;
@@ -206,7 +180,6 @@ nav{
   padding:.22rem .65rem;
 }
 .mentor-role span svg{width:12px;height:12px;color:var(--vm)}
-
 .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.5rem}
 .ic{
   background:rgba(255,255,255,.04);
@@ -225,17 +198,106 @@ nav{
 .ic h4{font-family:'Outfit',sans-serif;font-size:.82rem;font-weight:700;color:var(--txt);margin-bottom:.25rem}
 .ic p{font-size:.78rem;color:var(--mu);margin:0;line-height:1.5}
 
-/* ═══════════════════════
-   STORIES
-═══════════════════════ */
-.stories{padding:64px 0;background:var(--bg)}
+/* ═══ REVIEWS SECTION ═══ */
+.reviews{padding:64px 0;background:var(--bg3)}
 
+.reviews-slider-wrap{
+  position:relative;
+  overflow:hidden;
+  margin-top:1.5rem;
+}
+.reviews-track{
+  display:flex;
+  gap:1rem;
+  transition:transform .5s cubic-bezier(.4,0,.2,1);
+  will-change:transform;
+}
+.review-card{
+  flex:0 0 calc(100% - 2.2rem);
+  max-width:calc(480px - 2.2rem);
+  background:rgba(255,255,255,.05);
+  border:1px solid var(--bo);
+  border-radius:18px;
+  padding:1.4rem;
+  margin:0 1.1rem;
+  position:relative;
+  overflow:hidden;
+}
+.review-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--v),var(--vm));
+}
+.review-top{
+  display:flex;align-items:center;gap:.75rem;
+  margin-bottom:1rem;
+}
+.review-avatar{
+  width:46px;height:46px;border-radius:50%;
+  background:linear-gradient(135deg,var(--v),var(--vm));
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Outfit',sans-serif;font-weight:800;font-size:1.1rem;
+  color:#fff;flex-shrink:0;
+}
+.review-info h4{
+  font-family:'Outfit',sans-serif;font-weight:700;font-size:.9rem;
+  color:var(--txt);margin-bottom:.12rem;
+}
+.review-info p{font-size:.73rem;color:var(--mu);margin:0}
+.review-stars{
+  display:flex;gap:2px;margin-bottom:.75rem;
+}
+.review-stars span{color:#f59e0b;font-size:.95rem}
+.review-text{
+  font-size:.84rem;color:var(--txt2);line-height:1.65;
+  font-style:italic;
+}
+.review-earning{
+  display:inline-flex;align-items:center;gap:.3rem;
+  background:rgba(124,58,237,.15);
+  border:1px solid var(--bo);
+  color:var(--vm);font-family:'Outfit',sans-serif;
+  font-size:.72rem;font-weight:700;
+  padding:.28rem .7rem;border-radius:50px;
+  margin-top:.9rem;
+}
+
+/* Dots */
+.review-dots{
+  display:flex;align-items:center;justify-content:center;
+  gap:.45rem;margin-top:1.4rem;
+}
+.rdot{
+  width:7px;height:7px;border-radius:50%;
+  background:rgba(124,58,237,.25);
+  transition:background .3s,transform .3s;cursor:pointer;
+}
+.rdot.active{
+  background:var(--vm);transform:scale(1.35);
+}
+
+/* Nav arrows */
+.review-nav{
+  display:flex;align-items:center;justify-content:center;
+  gap:.75rem;margin-top:1rem;
+}
+.rnav-btn{
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(124,58,237,.12);
+  border:1px solid var(--bo);
+  color:var(--vm);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:background .2s,border-color .2s;
+}
+.rnav-btn:hover{background:rgba(124,58,237,.25);border-color:var(--boh)}
+.rnav-btn svg{width:16px;height:16px}
+
+/* STORIES */
+.stories{padding:64px 0;background:var(--bg)}
 .scroll-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:1rem;
   scrollbar-width:thin;scrollbar-color:var(--v) rgba(124,58,237,.1)}
 .scroll-wrap::-webkit-scrollbar{height:4px}
 .scroll-wrap::-webkit-scrollbar-track{background:rgba(124,58,237,.1);border-radius:2px}
 .scroll-wrap::-webkit-scrollbar-thumb{background:var(--v);border-radius:2px}
-
 .scroll-inner{
   display:flex;gap:.85rem;
   padding:0 1.1rem 0;
@@ -245,17 +307,13 @@ nav{
   width:220px;height:391px;
   border-radius:16px;overflow:hidden;
   border:1px solid var(--bo);background:#000;
-  flex-shrink:0;
-  transition:transform .25s;
+  flex-shrink:0;transition:transform .25s;
 }
 .short-c:hover{transform:scale(1.025)}
 .short-c iframe{width:100%;height:100%;border:none}
 
-/* ═══════════════════════
-   STEPS
-═══════════════════════ */
+/* STEPS */
 .steps{padding:64px 0;background:var(--bg2)}
-
 .steps-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:1.75rem}
 .step-c{
   background:rgba(255,255,255,.04);
@@ -291,9 +349,7 @@ nav{
 }
 .step-tag svg{width:10px;height:10px}
 
-/* ═══════════════════════
-   STATS
-═══════════════════════ */
+/* STATS */
 .stats{padding:60px 0;background:var(--bg3)}
 .stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:1.75rem}
 .stat-t{
@@ -303,15 +359,10 @@ nav{
   transition:transform .2s,border-color .2s;
 }
 .stat-t:hover{transform:translateY(-3px);border-color:var(--boh)}
-.stat-t .big{
-  font-family:'Outfit',sans-serif;font-weight:900;
-  font-size:2rem;color:var(--vm);line-height:1;
-}
+.stat-t .big{font-family:'Outfit',sans-serif;font-weight:900;font-size:2rem;color:var(--vm);line-height:1;}
 .stat-t .lbl{font-size:.73rem;color:var(--mu);margin-top:.35rem;line-height:1.3}
 
-/* ═══════════════════════
-   FAQ
-═══════════════════════ */
+/* FAQ */
 .faq{padding:64px 0;background:var(--bg)}
 .faq-list{margin-top:1.5rem}
 .faq-item{border:1px solid var(--bo);border-radius:14px;margin-bottom:.55rem;overflow:hidden;transition:border-color .2s}
@@ -330,13 +381,8 @@ nav{
 .faq-item.open .faq-body{max-height:200px}
 .faq-body p{padding:.1rem 1.1rem 1rem;font-size:.84rem;color:var(--mu);margin:0;line-height:1.65}
 
-/* ═══════════════════════
-   CTA
-═══════════════════════ */
-.cta{
-  padding:72px 0;text-align:center;background:var(--bg2);
-  position:relative;overflow:hidden;
-}
+/* CTA */
+.cta{padding:72px 0;text-align:center;background:var(--bg2);position:relative;overflow:hidden;}
 .cta::before{
   content:'';position:absolute;top:50%;left:50%;
   transform:translate(-50%,-50%);
@@ -351,11 +397,7 @@ nav{
   letter-spacing:-.02em;margin:.6rem 0 .6rem;
 }
 .cta p{color:var(--mu);font-size:.88rem;margin-bottom:1.8rem;line-height:1.6}
-.cta-card{
-  background:rgba(124,58,237,.08);
-  border:1px solid var(--boh);border-radius:20px;
-  padding:1.5rem;
-}
+.cta-card{background:rgba(124,58,237,.08);border:1px solid var(--boh);border-radius:20px;padding:1.5rem;}
 .wa-btn{
   display:flex;align-items:center;justify-content:center;gap:.6rem;
   width:100%;
@@ -368,68 +410,46 @@ nav{
 }
 .wa-btn:hover{transform:translateY(-3px);box-shadow:0 14px 38px rgba(37,211,102,.45);color:#fff}
 .wa-btn svg{width:22px;height:22px;flex-shrink:0}
-.cta-num{color:var(--mu);font-size:.78rem;margin-top:.9rem}
-.cta-num strong{color:var(--txt2)}
 
-/* ═══════════════════════
-   FOOTER
-═══════════════════════ */
-footer{
-  background:var(--bg);border-top:1px solid var(--bo);
-  color:var(--mu);padding:1.75rem 0;text-align:center;font-size:.8rem;
-}
+/* FOOTER */
+footer{background:var(--bg);border-top:1px solid var(--bo);color:var(--mu);padding:1.75rem 0;text-align:center;font-size:.8rem;}
 .footer-in{display:flex;flex-direction:column;align-items:center;gap:.9rem}
 .insta-btn{
   display:inline-flex;align-items:center;gap:.4rem;
   background:linear-gradient(135deg,#833ab4,#e1306c);
   color:#fff;padding:.52rem 1.25rem;border-radius:50px;
-  font-weight:600;font-size:.8rem;text-decoration:none;
-  transition:transform .2s;
+  font-weight:600;font-size:.8rem;text-decoration:none;transition:transform .2s;
 }
 .insta-btn:hover{transform:translateY(-2px);color:#fff}
 .insta-btn svg{width:14px;height:14px}
 .pp-btn{background:none;border:none;color:var(--mu);font-size:.76rem;cursor:pointer;text-decoration:underline}
 .pp-btn:hover{color:var(--txt2)}
 
-/* ═══════════════════════
-   MODAL
-═══════════════════════ */
+/* MODAL */
 .ov{
-  position:fixed;inset:0;
-  background:rgba(10,7,22,.85);
+  position:fixed;inset:0;background:rgba(10,7,22,.85);
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  z-index:2000;
-  display:flex;align-items:flex-end;justify-content:center;
-  padding:0;
-  opacity:0;visibility:hidden;
-  transition:opacity .28s,visibility .28s;
+  z-index:2000;display:flex;align-items:flex-end;justify-content:center;
+  padding:0;opacity:0;visibility:hidden;transition:opacity .28s,visibility .28s;
 }
 .ov.open{opacity:1;visibility:visible}
 .mbox{
-  background:var(--bg2);
-  border:1px solid var(--boh);
+  background:var(--bg2);border:1px solid var(--boh);
   border-radius:22px 22px 0 0;
-  width:100%;max-width:480px;
-  max-height:94vh;overflow-y:auto;
-  transform:translateY(30px);
-  transition:transform .28s;
+  width:100%;max-width:480px;max-height:94vh;overflow-y:auto;
+  transform:translateY(30px);transition:transform .28s;
 }
 .ov.open .mbox{transform:translateY(0)}
 .mhead{
-  padding:1.2rem 1.3rem .9rem;
-  border-bottom:1px solid var(--bo);
+  padding:1.2rem 1.3rem .9rem;border-bottom:1px solid var(--bo);
   display:flex;align-items:center;justify-content:space-between;
   position:sticky;top:0;background:var(--bg2);z-index:1;
 }
 .mhead::before{
-  content:'';
-  position:absolute;top:-.65rem;left:50%;transform:translateX(-50%);
+  content:'';position:absolute;top:-.65rem;left:50%;transform:translateX(-50%);
   width:36px;height:4px;background:rgba(255,255,255,.15);border-radius:4px;
 }
-.mhead h3{
-  font-family:'Outfit',sans-serif;font-weight:800;font-size:1rem;
-  color:var(--txt);margin:0;display:flex;align-items:center;gap:.4rem;
-}
+.mhead h3{font-family:'Outfit',sans-serif;font-weight:800;font-size:1rem;color:var(--txt);margin:0;display:flex;align-items:center;gap:.4rem;}
 .mhead h3 svg{width:18px;height:18px;color:var(--vm)}
 .mclose{
   background:rgba(255,255,255,.07);border:1px solid var(--bo);
@@ -441,25 +461,20 @@ footer{
 .mclose svg{width:15px;height:15px}
 .mbody{padding:1.1rem 1.3rem 1.5rem;display:flex;flex-direction:column;gap:.8rem}
 .msub{font-size:.8rem;color:var(--mu);margin:0}
-
 .fg label{display:block;font-size:.68rem;font-weight:700;color:var(--txt2);margin-bottom:.35rem;text-transform:uppercase;letter-spacing:.05em}
 .fg label .req{color:#f472b6}
 .fw{position:relative;display:flex;align-items:center}
 .fi{position:absolute;left:.9rem;width:16px;height:16px;color:var(--mu);pointer-events:none;flex-shrink:0}
 .fg input,.fg select{
   width:100%;padding:.76rem 1rem .76rem 2.6rem;
-  background:rgba(255,255,255,.05);
-  border:1px solid var(--bo);border-radius:11px;
-  font-size:.88rem;font-family:'Inter',sans-serif;
-  color:var(--txt);outline:none;
-  transition:border-color .2s,background .2s;
-  -webkit-appearance:none;appearance:none;
+  background:rgba(255,255,255,.05);border:1px solid var(--bo);border-radius:11px;
+  font-size:.88rem;font-family:'Inter',sans-serif;color:var(--txt);outline:none;
+  transition:border-color .2s,background .2s;-webkit-appearance:none;appearance:none;
 }
 .fg input::placeholder{color:var(--mu)}
 .fg input:focus,.fg select:focus{border-color:var(--v);background:rgba(124,58,237,.08)}
 .fg select option{background:#1a1230;color:var(--txt)}
 .sa{position:absolute;right:.9rem;pointer-events:none;color:var(--mu);width:15px;height:15px}
-
 .sbtn{
   width:100%;padding:.9rem;
   background:linear-gradient(135deg,var(--v),var(--vm));
@@ -467,13 +482,12 @@ footer{
   border:none;border-radius:50px;cursor:pointer;
   box-shadow:0 8px 26px rgba(124,58,237,.45);
   transition:transform .22s,box-shadow .22s;
-  display:flex;align-items:center;justify-content:center;gap:.5rem;
-  margin-top:.2rem;
+  display:flex;align-items:center;justify-content:center;gap:.5rem;margin-top:.2rem;
 }
 .sbtn:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(124,58,237,.6)}
 .sbtn svg{width:18px;height:18px;flex-shrink:0}
 
-/* ─ PRIVACY ─ */
+/* PRIVACY */
 .ppov{
   position:fixed;inset:0;background:rgba(10,7,22,.85);
   backdrop-filter:blur(10px);z-index:3000;
@@ -487,11 +501,7 @@ footer{
   width:100%;max-width:480px;max-height:88vh;overflow-y:auto;
   padding:1.5rem 1.3rem 2rem;position:relative;
 }
-.ppbox h2{
-  font-family:'Outfit',sans-serif;color:var(--txt);
-  font-size:1.05rem;font-weight:800;margin-bottom:1rem;
-  display:flex;align-items:center;gap:.45rem;
-}
+.ppbox h2{font-family:'Outfit',sans-serif;color:var(--txt);font-size:1.05rem;font-weight:800;margin-bottom:1rem;display:flex;align-items:center;gap:.45rem;}
 .ppbox h2 svg{width:18px;height:18px;color:var(--vm)}
 .ppbox h4{font-size:.75rem;font-weight:700;color:var(--txt2);margin:1rem 0 .3rem;text-transform:uppercase;letter-spacing:.05em}
 .ppbox p{font-size:.83rem;color:var(--mu);margin:0;line-height:1.6}
@@ -504,18 +514,13 @@ footer{
 <!-- NAV -->
 <nav>
   <div class="nav-in">
-    <a href="#" class="nav-logo">
-      <span class="logo-dot"></span>Salma Khatoon
-    </a>
-    <button class="nav-btn" onclick="openForm()">
-      <i data-lucide="phone"></i> Join Now
-    </button>
+    <a href="#" class="nav-logo"><span class="logo-dot"></span>Salma Khatoon</a>
+    <button class="nav-btn" onclick="openForm()"><i data-lucide="phone"></i> Join Now</button>
   </div>
 </nav>
 
-<!-- ══ HERO ══ -->
+<!-- HERO -->
 <section class="hero">
-  <!-- VIDEO with 4-side gap, rounded corners, NOT touching nav -->
   <div class="hero-video-wrap">
     <div class="hero-video">
       <div class="v-ratio">
@@ -523,16 +528,11 @@ footer{
       </div>
     </div>
   </div>
-
   <div class="wrap" style="padding-top:1.4rem">
-    <div class="hero-badge" style="margin-bottom:1rem"><span class="badge"><i data-lucide="zap"></i> 1000+ Students Already Earning</span></div>
+    <div style="text-align:center;margin-bottom:1rem"><span class="badge"><i data-lucide="zap"></i> 1000+ Students Already Earning</span></div>
     <div class="hero-actions">
-      <button class="btn-p" onclick="openForm()">
-        <i data-lucide="rocket"></i> Get Started — Free
-      </button>
-      <a href="#stories" class="btn-g">
-        <i data-lucide="play-circle"></i> Watch Student Stories
-      </a>
+      <button class="btn-p" onclick="openForm()"><i data-lucide="rocket"></i> Get Started — Free</button>
+      <a href="#stories" class="btn-g"><i data-lucide="play-circle"></i> Watch Student Stories</a>
     </div>
     <div class="hero-stats" style="margin-top:1rem">
       <div class="hs"><div class="n"><span class="counter" data-target="1000" data-suffix="+">0</span></div><div class="l">Students</div></div>
@@ -543,7 +543,7 @@ footer{
   </div>
 </section>
 
-<!-- ══ MENTOR ══ -->
+<!-- MENTOR -->
 <section class="mentor">
   <div class="wrap">
     <div class="sec-head">
@@ -559,34 +559,145 @@ footer{
       <span><i data-lucide="clock"></i> 5+ Years Exp</span>
     </div>
     <div class="info-grid">
-      <div class="ic">
-        <div class="ic-ico"><i data-lucide="target"></i></div>
-        <h4>Real Skills</h4>
-        <p>Social Media, Content Creation, Affiliate Marketing — 100% legit.</p>
-      </div>
-      <div class="ic">
-        <div class="ic-ico"><i data-lucide="laptop"></i></div>
-        <h4>Work Anywhere</h4>
-        <p>1–2 hrs daily from your phone — students &amp; housewives friendly.</p>
-      </div>
-      <div class="ic">
-        <div class="ic-ico"><i data-lucide="sprout"></i></div>
-        <h4>Zero Experience</h4>
-        <p>Start from scratch. Guided every step of the way.</p>
-      </div>
-      <div class="ic">
-        <div class="ic-ico"><i data-lucide="trending-up"></i></div>
-        <h4>Multiple Income</h4>
-        <p>Many earning opportunities — don't depend on one source.</p>
-      </div>
+      <div class="ic"><div class="ic-ico"><i data-lucide="target"></i></div><h4>Real Skills</h4><p>Social Media, Content Creation, Affiliate Marketing — 100% legit.</p></div>
+      <div class="ic"><div class="ic-ico"><i data-lucide="laptop"></i></div><h4>Work Anywhere</h4><p>1–2 hrs daily from your phone — students &amp; housewives friendly.</p></div>
+      <div class="ic"><div class="ic-ico"><i data-lucide="sprout"></i></div><h4>Zero Experience</h4><p>Start from scratch. Guided every step of the way.</p></div>
+      <div class="ic"><div class="ic-ico"><i data-lucide="trending-up"></i></div><h4>Multiple Income</h4><p>Many earning opportunities — don't depend on one source.</p></div>
     </div>
-    <button class="btn-p" onclick="openForm()">
-      <i data-lucide="message-circle"></i> Connect with Me
-    </button>
+    <button class="btn-p" onclick="openForm()"><i data-lucide="message-circle"></i> Connect with Me</button>
   </div>
 </section>
 
-<!-- ══ STORIES ══ -->
+<!-- ══ REVIEWS SLIDER ══ -->
+<section class="reviews">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="badge"><i data-lucide="heart"></i> Student Reviews</span>
+      <h2 class="sec-title">What They're <span class="g">Saying</span></h2>
+    </div>
+  </div>
+
+  <div class="reviews-slider-wrap" id="reviewsSlider">
+    <div class="reviews-track" id="reviewsTrack">
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">P</div>
+          <div class="review-info"><h4>Priya Sharma</h4><p>Student, Delhi</p></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Maine socha tha phone se paise kaise milenge... par Salma didi ne sab sikhaya. Pehle mahine hi mujhe ₹4,500 mile! Bahut shukriya didi 🙏"</p>
+        <span class="review-earning"><i data-lucide="indian-rupee"></i> ₹4,500 first month</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">R</div>
+          <div class="review-info"><h4>Ruksana Begum</h4><p>Housewife, Lucknow</p></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Ghar ka kaam aur ye side hustle dono saath chal raha hai. Salma ji ka program bahut acha hai, simple aur sahi guide milti hai. Ab main khud kamaati hoon!"</p>
+        <span class="review-earning"><i data-lucide="indian-rupee"></i> ₹6,000/month</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">A</div>
+          <div class="review-info"><h4>Aryan Verma</h4><p>College Student, Pune</p></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Padhai ke saath part time karna chahta tha. Salma mam ne Affiliate Marketing seekhaya — ab daily ₹200-500 aa rahe hain bina koi investment ke!"</p>
+        <span class="review-earning"><i data-lucide="indian-rupee"></i> ₹8,000+ monthly</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">N</div>
+          <div class="review-info"><h4>Neha Gupta</h4><p>Working Professional, Jaipur</p></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Job ke baad 1-2 ghante deti hoon. Social media management seekh ke 2 clients mile! Salma didi 24/7 help karti hain, kabhi akeli nahi lagti. Highly recommend!"</p>
+        <span class="review-earning"><i data-lucide="indian-rupee"></i> ₹10,000 extra/month</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">S</div>
+          <div class="review-info"><h4>Sana Khan</h4><p>Housewife, Hyderabad</p></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Pehle dar lagta tha online kaam ka. Par Salma ji ne step by step sikhaya. Ab content create karte hain aur paise bhi aate hain. Life change ho gayi!"</p>
+        <span class="review-earning"><i data-lucide="indian-rupee"></i> ₹5,500/month</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">M</div>
+          <div class="review-info"><h4>Mohit Yadav</h4><p>Student, Bhopal</p></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Zero experience tha mujhe. Salma mam ne WhatsApp group mein sab bataya, videos diye. 3 hafte mein pehla payment receive kiya. Bahut genuine program hai!"</p>
+        <span class="review-earning"><i data-lucide="indian-rupee"></i> ₹3,200 in 3 weeks</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">F</div>
+          <div class="review-info"><h4>Fatima Shaikh</h4><p>Housewife, Mumbai</p></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Mujhe laga tha ye sab fake hota hai... par join karne ke baad sach mein result aaya. Salma didi ne jo promise kiya tha wo sach nikla. Ab meri alag earning hai!"</p>
+        <span class="review-earning"><i data-lucide="indian-rupee"></i> ₹7,000/month</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">K</div>
+          <div class="review-info"><h4>Kajal Mishra</h4><p>12th Pass, Agra</p></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"12th ke baad kuch karna chahti thi. College se pehle Salma didi ka program join kiya. Ab main khud earning karti hoon aur family ki madad bhi karte hoon!"</p>
+        <span class="review-earning"><i data-lucide="indian-rupee"></i> ₹4,800/month</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">D</div>
+          <div class="review-info"><h4>Deepika Rawat</h4><p>Teacher, Dehradun</p></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Teaching job ke saath weekend par kaam karti hoon. Salma ji ka training bahut professional hai. Affiliate income se extra ₹9,000 aa rahe hain har mahine!"</p>
+        <span class="review-earning"><i data-lucide="indian-rupee"></i> ₹9,000 extra/month</span>
+      </div>
+
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">Z</div>
+          <div class="review-info"><h4>Zara Ansari</h4><p>Student, Patna</p></div>
+        </div>
+        <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <p class="review-text">"Salma didi best mentor hain! Maine sab friends ko bataya. Inki community mein sabse pehle help milti hai. Genuinely caring aur result-driven program hai yeh!"</p>
+        <span class="review-earning"><i data-lucide="indian-rupee"></i> ₹6,500/month</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Dots -->
+  <div class="review-dots" id="reviewDots"></div>
+
+  <!-- Nav arrows -->
+  <div class="review-nav">
+    <button class="rnav-btn" id="rPrev" aria-label="Previous"><i data-lucide="chevron-left"></i></button>
+    <button class="rnav-btn" id="rNext" aria-label="Next"><i data-lucide="chevron-right"></i></button>
+  </div>
+
+  <div class="wrap" style="margin-top:1.5rem">
+    <button class="btn-p" onclick="openForm()"><i data-lucide="rocket"></i> Join Them — Start Today</button>
+  </div>
+</section>
+
+<!-- STORIES -->
 <section class="stories" id="stories">
   <div class="wrap">
     <div class="sec-head">
@@ -606,7 +717,7 @@ footer{
   </div>
 </section>
 
-<!-- ══ STEPS ══ -->
+<!-- STEPS -->
 <section class="steps">
   <div class="wrap">
     <div class="sec-head">
@@ -643,13 +754,11 @@ footer{
         <span class="step-tag"><i data-lucide="trending-up"></i> Week 1</span>
       </div>
     </div>
-    <button class="btn-p" onclick="openForm()">
-      <i data-lucide="phone"></i> Join Now — Free to Start
-    </button>
+    <button class="btn-p" onclick="openForm()"><i data-lucide="phone"></i> Join Now — Free to Start</button>
   </div>
 </section>
 
-<!-- ══ STATS ══ -->
+<!-- STATS -->
 <section class="stats">
   <div class="wrap">
     <div class="sec-head">
@@ -657,27 +766,15 @@ footer{
       <h2 class="sec-title">Now It's <span class="g">YOUR Time</span></h2>
     </div>
     <div class="stats-grid">
-      <div class="stat-t">
-        <div class="big"><span class="counter" data-target="1000" data-suffix="+">0</span></div>
-        <div class="lbl">Students Trained</div>
-      </div>
-      <div class="stat-t">
-        <div class="big">₹<span class="counter" data-target="500" data-suffix="+">0</span></div>
-        <div class="lbl">Earned by Students</div>
-      </div>
-      <div class="stat-t">
-        <div class="big"><span class="counter" data-target="100" data-suffix="+">0</span></div>
-        <div class="lbl">Active Earners</div>
-      </div>
-      <div class="stat-t">
-        <div class="big"><span class="counter" data-target="5" data-suffix="+">0</span></div>
-        <div class="lbl">Years Experience</div>
-      </div>
+      <div class="stat-t"><div class="big"><span class="counter" data-target="1000" data-suffix="+">0</span></div><div class="lbl">Students Trained</div></div>
+      <div class="stat-t"><div class="big">₹<span class="counter" data-target="500" data-suffix="+">0</span></div><div class="lbl">Earned by Students</div></div>
+      <div class="stat-t"><div class="big"><span class="counter" data-target="100" data-suffix="+">0</span></div><div class="lbl">Active Earners</div></div>
+      <div class="stat-t"><div class="big"><span class="counter" data-target="5" data-suffix="+">0</span></div><div class="lbl">Years Experience</div></div>
     </div>
   </div>
 </section>
 
-<!-- ══ FAQ ══ -->
+<!-- FAQ -->
 <section class="faq">
   <div class="wrap">
     <div class="sec-head">
@@ -686,45 +783,30 @@ footer{
     </div>
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">
-          <span>What kind of work will I do?</span>
-          <i data-lucide="chevron-down" class="faq-chev"></i>
-        </button>
+        <button class="faq-btn" onclick="toggleFaq(this)"><span>What kind of work will I do?</span><i data-lucide="chevron-down" class="faq-chev"></i></button>
         <div class="faq-body"><p>Social Media Management, Content Creation, Affiliate Marketing — all real, skill-based digital work from your phone.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">
-          <span>Is this safe &amp; legit?</span>
-          <i data-lucide="chevron-down" class="faq-chev"></i>
-        </button>
+        <button class="faq-btn" onclick="toggleFaq(this)"><span>Is this safe &amp; legit?</span><i data-lucide="chevron-down" class="faq-chev"></i></button>
         <div class="faq-body"><p>100%. We focus on in-demand digital skills. 1000+ students are already earning — no shortcuts, no scams.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">
-          <span>How much time do I need daily?</span>
-          <i data-lucide="chevron-down" class="faq-chev"></i>
-        </button>
+        <button class="faq-btn" onclick="toggleFaq(this)"><span>How much time do I need daily?</span><i data-lucide="chevron-down" class="faq-chev"></i></button>
         <div class="faq-body"><p>Just 1–2 hours. Fully flexible — designed for students, job holders, and housewives with limited time.</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">
-          <span>When will I start earning?</span>
-          <i data-lucide="chevron-down" class="faq-chev"></i>
-        </button>
+        <button class="faq-btn" onclick="toggleFaq(this)"><span>When will I start earning?</span><i data-lucide="chevron-down" class="faq-chev"></i></button>
         <div class="faq-body"><p>Most students see results within the first month. Some even start in week one with consistent effort!</p></div>
       </div>
       <div class="faq-item">
-        <button class="faq-btn" onclick="toggleFaq(this)">
-          <span>Any prior experience needed?</span>
-          <i data-lucide="chevron-down" class="faq-chev"></i>
-        </button>
+        <button class="faq-btn" onclick="toggleFaq(this)"><span>Any prior experience needed?</span><i data-lucide="chevron-down" class="faq-chev"></i></button>
         <div class="faq-body"><p>None at all. We start from zero and guide you every step of the way. Your phone and dedication are enough.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ CTA ══ -->
+<!-- CTA -->
 <section class="cta">
   <div class="wrap cta-inner">
     <span class="badge"><i data-lucide="clock"></i> Limited Spots</span>
@@ -751,7 +833,7 @@ footer{
   </div>
 </footer>
 
-<!-- ══ FORM MODAL ══ -->
+<!-- FORM MODAL -->
 <div class="ov" id="formModal">
   <div class="mbox">
     <div class="mhead">
@@ -760,43 +842,10 @@ footer{
     </div>
     <div class="mbody">
       <p class="msub">Fill details — WhatsApp opens instantly after submit!</p>
-      <div class="fg">
-        <label>Full Name <span class="req">*</span></label>
-        <div class="fw">
-          <i data-lucide="user" class="fi"></i>
-          <input type="text" id="f_name" placeholder="Enter your full name" autocomplete="name">
-        </div>
-      </div>
-      <div class="fg">
-        <label>Phone Number <span class="req">*</span></label>
-        <div class="fw">
-          <i data-lucide="phone" class="fi"></i>
-          <input type="tel" id="f_phone" placeholder="e.g. 9876543210" inputmode="numeric">
-        </div>
-      </div>
-      <div class="fg">
-        <label>Age <span class="req">*</span></label>
-        <div class="fw">
-          <i data-lucide="calendar" class="fi"></i>
-          <input type="number" id="f_age" placeholder="Your age" min="10" max="80" inputmode="numeric">
-        </div>
-      </div>
-      <div class="fg">
-        <label>Profession <span class="req">*</span></label>
-        <div class="fw">
-          <i data-lucide="briefcase" class="fi"></i>
-          <select id="f_profession">
-            <option value="" disabled selected>Select Profession</option>
-            <option>Student</option>
-            <option>Housewife</option>
-            <option>Working Professional</option>
-            <option>Freelancer</option>
-            <option>Business Owner</option>
-            <option>Other</option>
-          </select>
-          <i data-lucide="chevron-down" class="sa"></i>
-        </div>
-      </div>
+      <div class="fg"><label>Full Name <span class="req">*</span></label><div class="fw"><i data-lucide="user" class="fi"></i><input type="text" id="f_name" placeholder="Enter your full name" autocomplete="name"></div></div>
+      <div class="fg"><label>Phone Number <span class="req">*</span></label><div class="fw"><i data-lucide="phone" class="fi"></i><input type="tel" id="f_phone" placeholder="e.g. 9876543210" inputmode="numeric"></div></div>
+      <div class="fg"><label>Age <span class="req">*</span></label><div class="fw"><i data-lucide="calendar" class="fi"></i><input type="number" id="f_age" placeholder="Your age" min="10" max="80" inputmode="numeric"></div></div>
+      <div class="fg"><label>Profession <span class="req">*</span></label><div class="fw"><i data-lucide="briefcase" class="fi"></i><select id="f_profession"><option value="" disabled selected>Select Profession</option><option>Student</option><option>Housewife</option><option>Working Professional</option><option>Freelancer</option><option>Business Owner</option><option>Other</option></select><i data-lucide="chevron-down" class="sa"></i></div></div>
       <button class="sbtn" onclick="submitForm()">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         Submit &amp; Open WhatsApp
@@ -821,6 +870,7 @@ footer{
 <script>
 lucide.createIcons();
 
+/* ── COUNTER ── */
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if (!e.isIntersecting || e.target.classList.contains('counted')) return;
@@ -837,6 +887,74 @@ const obs = new IntersectionObserver(entries => {
 }, {threshold:.3});
 document.querySelectorAll('.counter').forEach(c => obs.observe(c));
 
+/* ── REVIEWS SLIDER ── */
+(function(){
+  const track = document.getElementById('reviewsTrack');
+  const cards = track.querySelectorAll('.review-card');
+  const dotsWrap = document.getElementById('reviewDots');
+  const total = cards.length;
+  let current = 0;
+  let autoTimer = null;
+  let isPaused = false;
+
+  // Build dots
+  cards.forEach((_, i) => {
+    const d = document.createElement('div');
+    d.className = 'rdot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(d);
+  });
+
+  function getCardWidth() {
+    const card = cards[0];
+    const style = getComputedStyle(card);
+    const gap = 16; // 1rem gap
+    return card.offsetWidth + gap;
+  }
+
+  function goTo(idx) {
+    current = (idx + total) % total;
+    // Each card has margin:0 1.1rem so offset = current * (cardWidth + gap)
+    const cardW = getCardWidth();
+    track.style.transform = 'translateX(-' + (current * cardW) + 'px)';
+    dotsWrap.querySelectorAll('.rdot').forEach((d, i) => {
+      d.classList.toggle('active', i === current);
+    });
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  document.getElementById('rNext').addEventListener('click', () => { next(); resetAuto(); });
+  document.getElementById('rPrev').addEventListener('click', () => { prev(); resetAuto(); });
+
+  // Touch/swipe support
+  let touchStartX = 0;
+  track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; isPaused = true; }, {passive:true});
+  track.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) diff > 0 ? next() : prev();
+    isPaused = false;
+    resetAuto();
+  }, {passive:true});
+
+  function startAuto() {
+    autoTimer = setInterval(() => { if (!isPaused) next(); }, 3500);
+  }
+  function resetAuto() {
+    clearInterval(autoTimer);
+    startAuto();
+  }
+
+  // Pause on hover
+  const section = document.querySelector('.reviews');
+  section.addEventListener('mouseenter', () => { isPaused = true; });
+  section.addEventListener('mouseleave', () => { isPaused = false; });
+
+  startAuto();
+})();
+
+/* ── FORM ── */
 function openForm(){document.getElementById('formModal').classList.add('open');document.body.style.overflow='hidden'}
 function closeForm(){document.getElementById('formModal').classList.remove('open');document.body.style.overflow=''}
 document.getElementById('formModal').addEventListener('click',e=>{if(e.target===document.getElementById('formModal'))closeForm()});
@@ -861,6 +979,7 @@ function submitForm(){
   closeForm();
 }
 
+/* ── FAQ ── */
 function toggleFaq(btn){
   const item=btn.closest('.faq-item');
   const isOpen=item.classList.contains('open');
@@ -868,6 +987,7 @@ function toggleFaq(btn){
   if(!isOpen)item.classList.add('open');
 }
 
+/* ── PRIVACY ── */
 function openPrivacy(){document.getElementById('ppOverlay').classList.add('open')}
 function closePrivacy(){document.getElementById('ppOverlay').classList.remove('open')}
 document.getElementById('ppOverlay').addEventListener('click',e=>{if(e.target===document.getElementById('ppOverlay'))closePrivacy()});
