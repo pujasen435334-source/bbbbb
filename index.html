@@ -548,11 +548,16 @@ footer{background:var(--bg);border-top:1px solid var(--bo);color:var(--mu);paddi
   <div class="wrap">
     <div class="sec-head">
       <span class="badge"><i data-lucide="star"></i> Your Mentor</span>
-      <h2 class="sec-title">Hi, I'm <span class="g">Salma Khatoon</span></h2>
     </div>
+
+    <!-- PHOTO PEHLE -->
     <div class="mentor-photo">
       <img src="https://i.ibb.co/ytN7kny/Whats-App-Image-2026-06-25-at-22-19-58.jpg" alt="Salma Khatoon" loading="eager">
     </div>
+
+    <!-- HEADING PHOTO KE NEECHE -->
+    <h2 class="sec-title" style="text-align:center;margin-bottom:1rem">Hi, I'm <span class="g">Salma Khatoon</span></h2>
+
     <div class="mentor-role">
       <span><i data-lucide="briefcase"></i> Side Hustle Coach</span>
       <span><i data-lucide="monitor"></i> Digital Mentor</span>
@@ -568,9 +573,6 @@ footer{background:var(--bg);border-top:1px solid var(--bo);color:var(--mu);paddi
   </div>
 </section>
  
- 
-   
-
 <!-- STORIES -->
 <section class="stories" id="stories">
   <div class="wrap">
@@ -590,8 +592,6 @@ footer{background:var(--bg);border-top:1px solid var(--bo);color:var(--mu);paddi
     </div>
   </div>
 </section>
-
- 
 
 <!-- STATS -->
 <section class="stats">
@@ -721,73 +721,6 @@ const obs = new IntersectionObserver(entries => {
   });
 }, {threshold:.3});
 document.querySelectorAll('.counter').forEach(c => obs.observe(c));
-
-/* ── REVIEWS SLIDER ── */
-(function(){
-  const track = document.getElementById('reviewsTrack');
-  const cards = track.querySelectorAll('.review-card');
-  const dotsWrap = document.getElementById('reviewDots');
-  const total = cards.length;
-  let current = 0;
-  let autoTimer = null;
-  let isPaused = false;
-
-  // Build dots
-  cards.forEach((_, i) => {
-    const d = document.createElement('div');
-    d.className = 'rdot' + (i === 0 ? ' active' : '');
-    d.addEventListener('click', () => goTo(i));
-    dotsWrap.appendChild(d);
-  });
-
-  function getCardWidth() {
-    const card = cards[0];
-    const style = getComputedStyle(card);
-    const gap = 16; // 1rem gap
-    return card.offsetWidth + gap;
-  }
-
-  function goTo(idx) {
-    current = (idx + total) % total;
-    // Each card has margin:0 1.1rem so offset = current * (cardWidth + gap)
-    const cardW = getCardWidth();
-    track.style.transform = 'translateX(-' + (current * cardW) + 'px)';
-    dotsWrap.querySelectorAll('.rdot').forEach((d, i) => {
-      d.classList.toggle('active', i === current);
-    });
-  }
-
-  function next() { goTo(current + 1); }
-  function prev() { goTo(current - 1); }
-
-  document.getElementById('rNext').addEventListener('click', () => { next(); resetAuto(); });
-  document.getElementById('rPrev').addEventListener('click', () => { prev(); resetAuto(); });
-
-  // Touch/swipe support
-  let touchStartX = 0;
-  track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; isPaused = true; }, {passive:true});
-  track.addEventListener('touchend', e => {
-    const diff = touchStartX - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 40) diff > 0 ? next() : prev();
-    isPaused = false;
-    resetAuto();
-  }, {passive:true});
-
-  function startAuto() {
-    autoTimer = setInterval(() => { if (!isPaused) next(); }, 3500);
-  }
-  function resetAuto() {
-    clearInterval(autoTimer);
-    startAuto();
-  }
-
-  // Pause on hover
-  const section = document.querySelector('.reviews');
-  section.addEventListener('mouseenter', () => { isPaused = true; });
-  section.addEventListener('mouseleave', () => { isPaused = false; });
-
-  startAuto();
-})();
 
 /* ── FORM ── */
 function openForm(){document.getElementById('formModal').classList.add('open');document.body.style.overflow='hidden'}
